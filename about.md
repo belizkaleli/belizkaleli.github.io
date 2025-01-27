@@ -4,6 +4,5 @@ permalink: /about/
 layout: single
 ---
 
-hello
-## About Me
-hello
+
+Hi, I'm Beliz.
