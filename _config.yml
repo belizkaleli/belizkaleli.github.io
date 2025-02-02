@@ -323,3 +323,16 @@ defaults:
       comments: # true
       share: true
       related: true
+  - scope:
+      path: "_recipes"
+      type: recipes
+    values:
+      layout: single
+      comments: true
+      share: true
+
+
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
