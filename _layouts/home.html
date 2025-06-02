@@ -8,49 +8,13 @@ layout: archive
 <meta name="google-signin-client_id" content="237042201224-2ebtt9f0k1r9ta8j73fgjl9qb22avjkd.apps.googleusercontent.com">
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="https://apis.google.com/js/api.js"></script>
-
-<div id="events"></div>
-
+<a href="#" onclick="signOut();">Sign out</a>
 <script>
-  function handleCredentialResponse(response) {
-    const client = google.accounts.oauth2.initTokenClient({
-      client_id: '237042201224-2ebtt9f0k1r9ta8j73fgjl9qb22avjkd.apps.googleusercontent.com',
-      scope: 'https://www.googleapis.com/auth/calendar.readonly',
-      callback: (tokenResponse) => {
-        gapi.load('client', () => {
-          gapi.client.init({
-            apiKey: '', // Optional if you're only using token
-            discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest']
-          }).then(() => {
-            gapi.client.setToken({ access_token: tokenResponse.access_token });
-            const today = new Date();
-            const start = new Date(today.setHours(0, 0, 0)).toISOString();
-            const end = new Date(today.setHours(23, 59, 59)).toISOString();
-
-            return gapi.client.calendar.events.list({
-              calendarId: 'primary',
-              timeMin: start,
-              timeMax: end,
-              singleEvents: true,
-              orderBy: 'startTime'
-            });
-          }).then((res) => {
-            const events = res.result.items;
-            const container = document.getElementById('events');
-            if (!events.length) {
-              container.innerHTML = '<p>No events found for today.</p>';
-            } else {
-              container.innerHTML = '<ul>' + events.map(e =>
-                `<li>${e.summary} — ${e.start.dateTime || e.start.date}</li>`
-              ).join('') + '</ul>';
-            }
-          });
-        });
-      }
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
     });
-    client.requestAccessToken();
   }
 </script>
 
