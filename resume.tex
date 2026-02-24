@@ -1,0 +1,261 @@
+%-------------------------
+% Resume - Beliz Kaleli
+% Security Research Engineer
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{tgpagella}
+\usepackage{sourcesanspro}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with colored dividers
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{NavyBlue}\titlerule \vspace{-5pt}]
+
+% Define custom colors
+\definecolor{lightgrey}{gray}{0.5}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumePublicationHeading}[4]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textbf{\small #2}\\
+      \textit{\small #3} & \\
+      \textit{{\sffamily\small\color{lightgrey} #4}} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeAwardHeading}[3]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textbf{\small #2}\\
+      \textit{\small #3} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeBlogHeading}[4]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textbf{\small #2}\\
+      \textit{\small #3} & \href{#4}{\small \underline{Link}}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumePatentHeading}[4]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textbf{\small #2}\\
+      \textit{\small #4} & \textit{\small #3}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Beliz Kaleli} \\ \vspace{10pt}
+    \small
+    \href{mailto:belizkaleli18@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{belizkaleli18@gmail.com}} ~
+    \href{https://linkedin.com/in/belizkaleli}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/belizkaleli}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Palo Alto Networks}{October 2024 -- Present}
+      {Sr. Staff Security Research Engineer}{Santa Clara, CA}
+      \vspace{2pt}
+    \resumeSubheading
+      {Palo Alto Networks}{May 2023 -- October 2024}
+      {Staff Security Research Engineer}{Santa Clara, CA}
+      \vspace{2pt}
+    \resumeSubheading
+      {AYESAS}{September 2017 -- June 2018}
+      {Software Development Engineer}{Ankara, Turkey}
+      \vspace{2pt}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------ACADEMIC PAPERS-----------
+\section{Academic Papers}
+  \resumeSubHeadingListStart
+    \resumePublicationHeading
+        {ScanWars: A Multi-network Approach to Detecting and Analyzing The Rise of Scanning Activity}{2025}
+        {B. Kaleli, T. Li, F. Liu, O. Starov, M. Egele, G. Stringhini}{Symposium on Electronic Crime Research (eCrime)}
+    \resumePublicationHeading
+        {EasyCSPeasy: A Server-side and Language-agnostic XSS Mitigation}{2024}
+        {B. Kaleli, M. Egele, G. Stringhini}{Security and Privacy in Communication Networks (SecureComm) -- \textbf{Best Paper Award}}
+    \resumePublicationHeading
+        {To Err.Is Human: Characterizing the Threat of Unintended URLs in Social Media}{2021}
+        {B. Kaleli, B. Kondracki, M. Egele, G. Stringhini, N. Nikiforakis}{Network and Distributed System Security Symposium (NDSS)}
+    \resumePublicationHeading
+        {Studying the Privacy Issues of the Incorrect Use of the Feature Policy}{2020}
+        {B. Kaleli, M. Egele, G. Stringhini}{Workshop on Measurements, Attacks, and Defenses for the Web (MADWeb)}
+    \resumePublicationHeading
+        {On the Perils of Leaking Referrers in Online Collaboration Services}{2019}
+        {B. Kaleli, M. Egele, G. Stringhini}{International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA) -- \textbf{Best Paper Award}}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------BLOGS-----------
+\section{Blogs \& Posts}
+  \resumeSubHeadingListStart
+    \resumeBlogHeading
+        {Real-World Example of Malicious Indirect Prompt Injection}{Dec 2025}
+        {B. Kaleli, S. Farooqi, A. Starov}
+        {https://www.linkedin.com/posts/unit42_promptinjection-activity-7406438921041018881-OKa5/}
+    \resumeBlogHeading
+        {Crypto-themed Emails with Links to Sites Posing as Cryptocurrency Platforms}{Oct 2025}
+        {B. Kaleli, O. Starov}
+        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7389779413581746178}
+    \resumeBlogHeading
+        {Phishing Campaigns Impersonate Major Business Platforms and Abuse OAuth Flows}{Oct 2025}
+        {B. Kaleli, O. Starov}
+        {https://www.linkedin.com/feed/update/urn:li:share:7387241426998231040}
+    \resumeBlogHeading
+        {Blob URLs Used in Phishing Websites}{Oct 2025}
+        {P. Peng, A. Starov, B. Kaleli, L. Hu, S. Shuang}
+        {https://www.linkedin.com/feed/update/urn:li:share:7379640581871849472}
+    \resumeBlogHeading
+        {Ongoing Phishing Campaign Using Browser-In-The-Middle Technique}{Sep 2025}
+        {B. Kaleli, A. Starov, L. Hu, S. Shuang, N. Mohamed, B. Duncan}
+        {https://www.linkedin.com/posts/unit42_phishing-bitm-activity-7376692047900184577-q9m1/}
+    \resumeBlogHeading
+        {Fashionable Phishing Bait: GenAI on the Hook}{Aug 2025}
+        {Z. You, B. Kaleli, L. Hu, W. Wang}
+        {https://unit42.paloaltonetworks.com/genai-phishing-bait/}
+    \resumeBlogHeading
+        {It Was Not Me! Malware-Initiated Vulnerability Scanning Is on the Rise}{Apr 2024}
+        {B. Kaleli, F. Liu, P. Peng, A. Starov, J. Allen, S. Springer}
+        {https://unit42.paloaltonetworks.com/malware-initiated-scanning-attacks/}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------PATENTS-----------
+\section{Patents}
+  \resumeSubHeadingListStart
+    \resumePatentHeading
+        {Detecting Scanning and Attacking Uniform Resource Locators in Network Traffic}{Published (US-12483573-B2)}
+        {Nov 2025}
+        {B. Kaleli, F. Liu, A. Starov}
+    \resumePatentHeading
+        {Phantom Squatting: Anticipating GenAI-Hallucinated URLs Before Attackers Do}{Filed}
+        {Oct 2025}
+        {K. Nagaraj, D. Marty, B. Kaleli, A. Starov}
+    \resumePatentHeading
+        {Detecting Defensively Registered Domains Using LLMs}{Filed}
+        {Oct 2025}
+        {N. Mohamed, J. Chen, A. Starov, B. Kaleli}
+    \resumePatentHeading
+        {AVA: Authentication Verification Analyzer for Detecting OAuth Flow Abuses}{Filed}
+        {June 2025}
+        {B. Kaleli, D. Marty, L. Hu, A. Starov}
+    \resumePatentHeading
+        {AI Social Engineering Defense: A Grounded AI-based Pipeline for Detecting Social Engineering Attacks}{Filed}
+        {June 2025}
+        {L. Hu, F. Liu, B. Kaleli, A. Starov}
+    \resumePatentHeading
+        {A Deep Learning Approach for Real-time Scanning Attack URLs Detection Using IUPG Framework}{Filed}
+        {Feb 2025}
+        {T. Li, B. Kutt, B. Kaleli, F. Liu, P. Peng, O. Starov, W. Hewlett}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------AWARDS-----------
+\section{Awards \& Honors}
+  \resumeSubHeadingListStart
+    \resumeAwardHeading
+        {Best Student Paper Award}{2024}
+        {International Conference on Security and Privacy in Communication Networks (SecureComm)}
+    \resumeAwardHeading
+        {Best Student Paper Award Finalist}{2020}
+        {The Center for Information of Systems and Engineering (CISE)}
+    \resumeAwardHeading
+        {Best Paper Award}{2019}
+        {International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA)}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------INVITED TALKS-----------
+\section{Invited Talks}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {University of Michigan, Center for Computer Security and Society (SECRIT)}{2021}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Boston University}{2018 -- Expected 2024}
+      {Ph.D., Computer Engineering | GPA: 3.8/4.0}{Boston, MA}
+    \resumeSubheading
+      {Boston University}{2018 -- 2021}
+      {M.S., Computer Engineering | GPA: 3.8/4.0}{Boston, MA}
+    \resumeSubheading
+      {Middle East Technical University}{2013 -- 2017}
+      {B.S., Electrical and Electronics Engineering}{Ankara, Turkey}
+  \resumeSubHeadingListEnd
+
+\end{document}
