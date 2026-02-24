@@ -34,34 +34,80 @@
 /* Light Theme */
 [data-theme="light"] {
     --color-bg-primary: #f5f0e8;
-    --color-bg-secondary: #9b8b76;
-    --color-bg-tertiary: #8a7a66;
+    --color-bg-secondary: #ebe5db;
+    --color-bg-tertiary: #e0d9cc;
     --color-accent-orange: #ff6b35;
     --color-accent-cyan: #0099cc;
     --color-accent-blue: #3366cc;
     --color-text-primary: #1a1a1a;
-    --color-text-secondary: #f5f0e8;
-    --color-text-muted: #e0d9cc;
-    --color-border: #7a6a56;
+    --color-text-secondary: #4a4a4a;
+    --color-text-muted: #6a6a6a;
+    --color-border: #d0c9bd;
     --color-name-highlight: #cc8800;
 }
 
-/* Light theme sidebar text overrides */
+/* Light theme sidebar specific styling */
+[data-theme="light"] .sidebar {
+    background: #9b8b76;
+    border-right-color: #7a6a56;
+}
+
+[data-theme="light"] .sidebar-header {
+    border-bottom-color: #7a6a56;
+}
+
 [data-theme="light"] .sidebar-name,
 [data-theme="light"] .sidebar-title,
 [data-theme="light"] .sidebar-link,
-[data-theme="light"] .sidebar-social a,
-[data-theme="light"] .resume-button,
-[data-theme="light"] .theme-toggle {
+[data-theme="light"] .sidebar-social a {
     color: #f5f0e8;
 }
 
 [data-theme="light"] .sidebar-link:hover {
+    background: rgba(0, 217, 255, 0.2);
     color: var(--color-accent-cyan);
 }
 
 [data-theme="light"] .sidebar-link.active {
+    background: rgba(255, 107, 53, 0.25);
     color: var(--color-accent-orange);
+}
+
+[data-theme="light"] .resume-button {
+    background: #8a7a66;
+    color: #f5f0e8;
+    border-color: #7a6a56;
+}
+
+[data-theme="light"] .resume-button:hover {
+    background: var(--color-accent-cyan);
+    color: #1a1a1a;
+    border-color: var(--color-accent-cyan);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: #8a7a66;
+    color: #f5f0e8;
+    border-color: #7a6a56;
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: var(--color-accent-cyan);
+    color: #1a1a1a;
+    border-color: var(--color-accent-cyan);
+}
+
+[data-theme="light"] .sidebar-social {
+    border-top-color: #7a6a56;
+}
+
+[data-theme="light"] .sidebar-social a {
+    background: #8a7a66;
+}
+
+[data-theme="light"] .sidebar-social a:hover {
+    background: var(--color-accent-cyan);
+    color: #1a1a1a;
 }
 
 * {
