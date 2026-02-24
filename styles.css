@@ -34,16 +34,34 @@
 /* Light Theme */
 [data-theme="light"] {
     --color-bg-primary: #f5f0e8;
-    --color-bg-secondary: #ebe5db;
-    --color-bg-tertiary: #e0d9cc;
+    --color-bg-secondary: #9b8b76;
+    --color-bg-tertiary: #8a7a66;
     --color-accent-orange: #ff6b35;
     --color-accent-cyan: #0099cc;
     --color-accent-blue: #3366cc;
     --color-text-primary: #1a1a1a;
-    --color-text-secondary: #4a4a4a;
-    --color-text-muted: #6a6a6a;
-    --color-border: #d0c9bd;
+    --color-text-secondary: #f5f0e8;
+    --color-text-muted: #e0d9cc;
+    --color-border: #7a6a56;
     --color-name-highlight: #cc8800;
+}
+
+/* Light theme sidebar text overrides */
+[data-theme="light"] .sidebar-name,
+[data-theme="light"] .sidebar-title,
+[data-theme="light"] .sidebar-link,
+[data-theme="light"] .sidebar-social a,
+[data-theme="light"] .resume-button,
+[data-theme="light"] .theme-toggle {
+    color: #f5f0e8;
+}
+
+[data-theme="light"] .sidebar-link:hover {
+    color: var(--color-accent-cyan);
+}
+
+[data-theme="light"] .sidebar-link.active {
+    color: var(--color-accent-orange);
 }
 
 * {
