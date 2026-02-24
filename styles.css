@@ -71,12 +71,12 @@
 
 [data-theme="light"] .sidebar-link:hover {
     background: rgba(0, 217, 255, 0.2);
-    color: var(--color-accent-cyan);
+    color: #1a1a1a;
 }
 
 [data-theme="light"] .sidebar-link.active {
     background: rgba(255, 107, 53, 0.25);
-    color: var(--color-accent-orange);
+    color: #1a1a1a;
 }
 
 [data-theme="light"] .resume-button {
@@ -113,6 +113,14 @@
 
 [data-theme="light"] .sidebar-social a:hover {
     background: var(--color-accent-cyan);
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .resume-button:hover {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .theme-toggle:hover {
     color: #1a1a1a;
 }
 
@@ -453,45 +461,45 @@ body {
 }
 
 /* Agentic AI & Machine Learning - Purple */
-.skill-item:nth-child(1) i {
-    background: rgba(138, 43, 226, 0.15);
-    border: 1.5px solid #8a2be2;
-    color: #8a2be2;
+.skills-grid .skill-item:nth-child(1) i {
+    background: rgba(138, 43, 226, 0.15) !important;
+    border: 1.5px solid #8a2be2 !important;
+    color: #8a2be2 !important;
 }
 
 /* Web Security & Threat Detection - Orange */
-.skill-item:nth-child(2) i {
-    background: rgba(255, 107, 53, 0.15);
-    border: 1.5px solid var(--color-accent-orange);
-    color: var(--color-accent-orange);
+.skills-grid .skill-item:nth-child(2) i {
+    background: rgba(255, 107, 53, 0.15) !important;
+    border: 1.5px solid var(--color-accent-orange) !important;
+    color: var(--color-accent-orange) !important;
 }
 
 /* Cross-Functional Collaboration - Blue */
-.skill-item:nth-child(3) i {
-    background: rgba(77, 159, 255, 0.15);
-    border: 1.5px solid var(--color-accent-blue);
-    color: var(--color-accent-blue);
+.skills-grid .skill-item:nth-child(3) i {
+    background: rgba(77, 159, 255, 0.15) !important;
+    border: 1.5px solid var(--color-accent-blue) !important;
+    color: var(--color-accent-blue) !important;
 }
 
 /* Continuous Learning - Green */
-.skill-item:nth-child(4) i {
-    background: rgba(34, 197, 94, 0.15);
-    border: 1.5px solid #22c55e;
-    color: #22c55e;
+.skills-grid .skill-item:nth-child(4) i {
+    background: rgba(34, 197, 94, 0.15) !important;
+    border: 1.5px solid #22c55e !important;
+    color: #22c55e !important;
 }
 
 /* Skiing & Tennis - Cyan */
-.skill-item:nth-child(5) i {
-    background: rgba(0, 217, 255, 0.15);
-    border: 1.5px solid var(--color-accent-cyan);
-    color: var(--color-accent-cyan);
+.skills-grid .skill-item:nth-child(5) i {
+    background: rgba(0, 217, 255, 0.15) !important;
+    border: 1.5px solid var(--color-accent-cyan) !important;
+    color: var(--color-accent-cyan) !important;
 }
 
 /* Health & Fitness - Red */
-.skill-item:nth-child(6) i {
-    background: rgba(239, 68, 68, 0.15);
-    border: 1.5px solid #ef4444;
-    color: #ef4444;
+.skills-grid .skill-item:nth-child(6) i {
+    background: rgba(239, 68, 68, 0.15) !important;
+    border: 1.5px solid #ef4444 !important;
+    color: #ef4444 !important;
 }
 
 .skill-item span {
