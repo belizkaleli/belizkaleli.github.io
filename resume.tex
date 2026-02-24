@@ -85,6 +85,16 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeHackathonHeading}[5]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textbf{\small #2}\\
+      \textit{\small #3} & \\
+      \textit{\small #4} & \\
+      \textit{{\sffamily\small\color{lightgrey} #5}} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeBlogHeading}[4]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
@@ -224,6 +234,11 @@
 %-----------AWARDS-----------
 \section{Awards \& Honors}
   \resumeSubHeadingListStart
+    \resumeHackathonHeading
+        {2nd Place in Project Showcase Track}{2026}
+        {Google Cloud/Palo Alto Networks Agentic AI Hackathon}
+        {AegisCrawler: Smart Agent for Unlocking Hidden Content}
+        {Neena Ekanathan (ISP), \textbf{B. Kaleli}, Chi-Wei Liu, Shehroze Farooqi}
     \resumeAwardHeading
         {Best Student Paper Award}{2024}
         {International Conference on Security and Privacy in Communication Networks (SecureComm)}
