@@ -3,17 +3,18 @@
    =========================== */
 
 :root {
-    /* Colors - Deep blue theme with electric cyan accents */
-    --color-bg-primary: #0a0e1a;
-    --color-bg-secondary: #111827;
-    --color-bg-tertiary: #1a2234;
-    --color-accent-primary: #00d9ff;
-    --color-accent-secondary: #0099ff;
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #cbd5e1;
-    --color-text-muted: #94a3b8;
-    --color-border: #1e293b;
-    --color-border-light: #334155;
+    /* Colors - Dark theme with vibrant orange accents */
+    --color-bg-primary: #0f0f0f;
+    --color-bg-secondary: #1a1a1a;
+    --color-bg-tertiary: #252525;
+    --color-accent-primary: #ff6b35;
+    --color-accent-secondary: #ff8c42;
+    --color-accent-tertiary: #ffa04d;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #d4d4d4;
+    --color-text-muted: #a3a3a3;
+    --color-border: #2a2a2a;
+    --color-border-light: #3a3a3a;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -29,8 +30,8 @@
     --font-mono: 'JetBrains Mono', monospace;
 
     /* Effects */
-    --glow-cyan: 0 0 20px rgba(0, 217, 255, 0.3);
-    --glow-cyan-strong: 0 0 40px rgba(0, 217, 255, 0.5);
+    --glow-orange: 0 0 20px rgba(255, 107, 53, 0.3);
+    --glow-orange-strong: 0 0 40px rgba(255, 107, 53, 0.5);
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -224,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5rem 1.25rem;
     background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
     border-radius: 6px;
-    color: var(--color-bg-primary) !important;
+    color: #ffffff !important;
     font-weight: 600;
     transition: all var(--transition-base);
 }
@@ -234,8 +235,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-orange);
+    background: linear-gradient(135deg, var(--color-accent-secondary), var(--color-accent-tertiary));
 }
 
 .nav-toggle {
@@ -267,41 +268,23 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     padding: var(--spacing-3xl) var(--spacing-lg);
-    background: linear-gradient(135deg, #0a0e1a 0%, #111827 50%, #0f1419 100%);
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
 }
 
 .hero-grid {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
-    opacity: 0.5;
-    animation: gridMove 20s linear infinite;
-}
-
-@keyframes gridMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    opacity: 0.3;
 }
 
 .hero-content {
     max-width: 900px;
     z-index: 2;
     text-align: center;
-    animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .hero-label {
@@ -316,7 +299,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5rem 1rem;
     border: 1px solid var(--color-accent-primary);
     border-radius: 50px;
-    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero-title {
@@ -332,7 +314,6 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: var(--spacing-sm);
-    animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .hero-subtitle {
@@ -341,7 +322,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: var(--color-text-secondary);
     line-height: 1.4;
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .hero-description {
@@ -350,7 +330,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto var(--spacing-xl);
-    animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .hero-actions {
@@ -359,7 +338,6 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: var(--spacing-xl);
-    animation: fadeInUp 1s ease-out 1s both;
 }
 
 .btn {
@@ -379,13 +357,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
-    color: var(--color-bg-primary);
+    color: #ffffff;
     box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--glow-cyan-strong);
+    box-shadow: var(--glow-orange-strong);
+    background: linear-gradient(135deg, var(--color-accent-secondary), var(--color-accent-tertiary));
 }
 
 .btn-secondary {
@@ -395,15 +373,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 217, 255, 0.1);
-    transform: translateY(-3px);
+    background: rgba(255, 107, 53, 0.1);
 }
 
 .hero-social {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
-    animation: fadeInUp 1s ease-out 1.2s both;
 }
 
 .hero-social a {
@@ -421,9 +397,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-social a:hover {
     background: var(--color-accent-primary);
-    color: var(--color-bg-primary);
-    transform: translateY(-5px);
-    box-shadow: var(--glow-cyan);
+    color: #ffffff;
+    box-shadow: var(--glow-orange);
     border-color: var(--color-accent-primary);
 }
 
@@ -439,19 +414,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
     font-size: 0.875rem;
     font-family: var(--font-mono);
-    animation: fadeInUp 1s ease-out 1.4s both;
 }
 
 .scroll-line {
     width: 2px;
     height: 40px;
     background: linear-gradient(to bottom, transparent, var(--color-accent-primary), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+    opacity: 0.5;
 }
 
 /* ===========================
@@ -490,9 +459,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .expertise-card:hover {
-    transform: translateY(-5px);
     border-color: var(--color-accent-primary);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-orange);
 }
 
 .expertise-card i {
@@ -563,10 +531,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-tags span:hover {
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     border-color: var(--color-accent-primary);
     color: var(--color-accent-primary);
-    transform: translateY(-2px);
 }
 
 /* ===========================
@@ -615,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-accent-primary);
     border: 3px solid var(--color-bg-primary);
     border-radius: 50%;
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-orange);
 }
 
 .timeline-content {
@@ -628,7 +595,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .timeline-content:hover {
     border-color: var(--color-accent-primary);
-    transform: translateX(8px);
 }
 
 .timeline-date {
@@ -701,14 +667,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .publication-card:hover {
     border-color: var(--color-accent-primary);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--glow-orange);
 }
 
 .publication-card.featured {
     background: linear-gradient(135deg,
-        rgba(0, 217, 255, 0.05) 0%,
-        rgba(0, 153, 255, 0.05) 100%
+        rgba(255, 107, 53, 0.08) 0%,
+        rgba(255, 140, 66, 0.08) 100%
     );
     border: 2px solid var(--color-accent-primary);
 }
@@ -783,9 +748,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pub-link:hover {
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     border-color: var(--color-accent-primary);
-    transform: translateY(-2px);
 }
 
 /* ===========================
@@ -814,8 +778,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .talk-card:hover {
     border-color: var(--color-accent-primary);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--glow-orange);
 }
 
 .talk-header {
@@ -829,7 +792,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .talk-type {
     padding: 0.375rem 0.75rem;
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     color: var(--color-accent-primary);
     border: 1px solid var(--color-accent-primary);
     font-size: 0.75rem;
@@ -888,7 +851,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .talk-link:hover {
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     border-color: var(--color-accent-primary);
     color: var(--color-accent-primary);
 }
@@ -918,14 +881,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .award-card:hover {
     border-color: var(--color-accent-primary);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--glow-orange);
 }
 
 .award-card.highlight {
     background: linear-gradient(135deg,
-        rgba(0, 217, 255, 0.05) 0%,
-        rgba(0, 153, 255, 0.05) 100%
+        rgba(255, 107, 53, 0.08) 0%,
+        rgba(255, 140, 66, 0.08) 100%
     );
     border: 2px solid var(--color-accent-primary);
 }
@@ -938,7 +900,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     border: 2px solid var(--color-accent-primary);
 }
 
@@ -1001,8 +963,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-card:hover {
     border-color: var(--color-accent-primary);
-    transform: translateY(-5px);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-orange);
 }
 
 .contact-icon {
@@ -1013,7 +974,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 107, 53, 0.15);
     border: 2px solid var(--color-accent-primary);
 }
 
@@ -1043,7 +1004,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid var(--color-accent-primary);
     border-radius: 12px;
     padding: var(--spacing-xl);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-orange);
 }
 
 .availability-content {
@@ -1266,14 +1227,11 @@ h1, h2, h3, h4, h5, h6 {
    =========================== */
 
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 1;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
 }
 
 /* ===========================

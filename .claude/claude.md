@@ -30,6 +30,7 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 ## Preferences
 
 - Design style: Modern, dark cybersecurity aesthetic
+- Each time after you finish working on my requests ask to push the new changes to remote.
 
 
 ---
