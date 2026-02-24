@@ -4,10 +4,48 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
+    initTheme();
     initSidebar();
     initSmoothScroll();
     initActiveLinks();
 });
+
+// ===========================
+// Theme Toggle
+// ===========================
+
+function initTheme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+
+        // Reinitialize icons after theme change
+        lucide.createIcons();
+    });
+}
+
+function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+
+    if (theme === 'dark') {
+        icon.setAttribute('data-lucide', 'sun');
+    } else {
+        icon.setAttribute('data-lucide', 'moon');
+    }
+}
 
 // ===========================
 // Sidebar Navigation
