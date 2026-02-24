@@ -4,81 +4,43 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
-    initNavigation();
-    initScrollAnimations();
+    initSidebar();
     initSmoothScroll();
+    initActiveLinks();
 });
 
 // ===========================
-// Navigation
+// Sidebar Navigation
 // ===========================
 
-function initNavigation() {
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-link');
+function initSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const mobileToggle = document.getElementById('mobileToggle');
 
-    // Navbar scroll effect
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Mobile menu toggle
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+    if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
-        navLinks.forEach(link => {
+        // Close sidebar when clicking on a link on mobile
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                }
             });
         });
 
-        // Close menu when clicking outside
+        // Close sidebar when clicking outside on mobile
         document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+            if (window.innerWidth <= 768) {
+                if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    sidebar.classList.remove('active');
+                }
             }
         });
     }
-
-    // Active link highlighting
-    const sections = document.querySelectorAll('section[id]');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
-            if (window.pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
 }
 
 // ===========================
@@ -92,7 +54,6 @@ function initSmoothScroll() {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
 
-            // Skip if href is just "#"
             if (href === '#') return;
 
             const target = document.querySelector(href);
@@ -100,11 +61,9 @@ function initSmoothScroll() {
             if (target) {
                 e.preventDefault();
 
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
@@ -112,81 +71,31 @@ function initSmoothScroll() {
 }
 
 // ===========================
-// Scroll Animations
+// Active Link Highlighting
 // ===========================
 
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
+function initActiveLinks() {
+    const sections = document.querySelectorAll('section[id]');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
             }
         });
-    }, observerOptions);
 
-    // Add fade-in class to elements
-    const animatedElements = document.querySelectorAll(`
-        .section-header,
-        .about-content,
-        .about-expertise,
-        .expertise-card,
-        .skills-section,
-        .timeline-item,
-        .publication-card,
-        .talk-card,
-        .award-card,
-        .contact-card,
-        .availability
-    `);
-
-    animatedElements.forEach((el, index) => {
-        el.classList.add('fade-in');
-        // Add staggered delay
-        el.style.transitionDelay = `${index * 0.05}s`;
-        observer.observe(el);
-    });
-}
-
-// ===========================
-// Parallax Effect for Hero Grid
-// ===========================
-
-const heroGrid = document.querySelector('.hero-grid');
-
-if (heroGrid) {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.5;
-
-        if (scrolled < window.innerHeight) {
-            heroGrid.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        }
-    });
-}
-
-// ===========================
-// Dynamic Grid Animation
-// ===========================
-
-// Add mouse movement parallax to hero content
-const heroContent = document.querySelector('.hero-content');
-
-if (heroContent) {
-    document.addEventListener('mousemove', (e) => {
-        if (window.innerWidth > 768) {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-
-            const moveX = (mouseX - 0.5) * 20;
-            const moveY = (mouseY - 0.5) * 20;
-
-            heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        }
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
     });
 }
 
@@ -208,7 +117,7 @@ emailLinks.forEach(link => {
 
                 // Show feedback
                 const originalText = link.textContent;
-                link.textContent = 'Email copied!';
+                link.textContent = 'Copied!';
                 link.style.color = 'var(--color-accent-primary)';
 
                 setTimeout(() => {
@@ -224,22 +133,13 @@ emailLinks.forEach(link => {
 });
 
 // ===========================
-// Publication/Talk Link Analytics
+// Link Placeholder Handler
 // ===========================
 
-document.querySelectorAll('.pub-link, .talk-link').forEach(link => {
+document.querySelectorAll('.item-links a').forEach(link => {
     link.addEventListener('click', (e) => {
-        // Prevent navigation for demo purposes
         if (link.getAttribute('href') === '#') {
             e.preventDefault();
-
-            // Visual feedback
-            const originalColor = link.style.color;
-            link.style.color = 'var(--color-accent-primary)';
-
-            setTimeout(() => {
-                link.style.color = originalColor;
-            }, 300);
         }
     });
 });
@@ -276,15 +176,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ===========================
-// Performance: Reduce animations on low-end devices
-// ===========================
-
-if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
-    document.documentElement.style.setProperty('--transition-base', '0.15s');
-    document.documentElement.style.setProperty('--transition-slow', '0.25s');
-}
-
-// ===========================
 // Console Message
 // ===========================
 
@@ -294,105 +185,7 @@ console.log(`
 █   Beliz Kaleli                       █
 █   Cybersecurity Research Engineer    █
 █                                      █
-█   Interested in the code?            █
-█   Check out the repo or get in touch █
-█                                      █
 ████████████████████████████████████████
 `,
-'color: #00d9ff; font-family: monospace; font-size: 12px; font-weight: bold;'
+'color: #ff6b35; font-family: monospace; font-size: 12px; font-weight: bold;'
 );
-
-console.log(
-    '%cSecurity Tip: Never paste code into the console unless you understand what it does!',
-    'color: #ff006e; font-size: 14px; font-weight: bold; background: #1a1f3a; padding: 10px; border-left: 4px solid #ff006e;'
-);
-
-// ===========================
-// Utility Functions
-// ===========================
-
-// Debounce function for performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Throttle function for scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function(...args) {
-        if (!inThrottle) {
-            func.apply(this, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-}
-
-// ===========================
-// Easter Egg: Konami Code
-// ===========================
-
-let konamiCode = [];
-const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.key);
-    konamiCode = konamiCode.slice(-10);
-
-    if (konamiCode.join(',') === konamiSequence.join(',')) {
-        activateEasterEgg();
-    }
-});
-
-function activateEasterEgg() {
-    // Add fun animation or effect
-    document.body.style.animation = 'rainbow 2s linear infinite';
-
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-    `;
-    document.head.appendChild(style);
-
-    setTimeout(() => {
-        document.body.style.animation = '';
-        style.remove();
-    }, 5000);
-
-    console.log('%c🎮 Konami Code Activated! 🎮', 'color: #00d9ff; font-size: 24px; font-weight: bold;');
-}
-
-// ===========================
-// Preload Critical Resources
-// ===========================
-
-// Preload fonts
-const fontPreload = document.createElement('link');
-fontPreload.rel = 'preload';
-fontPreload.as = 'font';
-fontPreload.type = 'font/woff2';
-fontPreload.crossOrigin = 'anonymous';
-
-// ===========================
-// Service Worker Registration (Optional)
-// ===========================
-
-if ('serviceWorker' in navigator) {
-    // Uncomment to enable service worker for offline functionality
-    // window.addEventListener('load', () => {
-    //     navigator.serviceWorker.register('/sw.js')
-    //         .then(reg => console.log('Service Worker registered'))
-    //         .catch(err => console.log('Service Worker registration failed'));
-    // });
-}

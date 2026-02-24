@@ -4,6 +4,7 @@
 This is a personal website for Beliz Kaleli, a cybersecurity research engineer.
 
 ## Custom Instructions
+- Each time after you finish working on my requests ask to push the new changes to remote.  
 
 DISTILLED_AESTHETICS_PROMPT = """
 <frontend_aesthetics>
@@ -30,7 +31,6 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 ## Preferences
 
 - Design style: Modern, dark cybersecurity aesthetic
-- Each time after you finish working on my requests ask to push the new changes to remote.
 
 
 ---

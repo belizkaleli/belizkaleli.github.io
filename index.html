@@ -12,612 +12,311 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">BK</a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#talks" class="nav-link">Talks</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1 class="sidebar-name">Beliz Kaleli</h1>
+            <p class="sidebar-title">Cybersecurity Research Engineer</p>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li><a href="#publications" class="sidebar-link active"><i data-lucide="book-open"></i> Publications</a></li>
+            <li><a href="#education" class="sidebar-link"><i data-lucide="graduation-cap"></i> Education</a></li>
+            <li><a href="#talks" class="sidebar-link"><i data-lucide="mic"></i> Talks</a></li>
+            <li><a href="#awards" class="sidebar-link"><i data-lucide="award"></i> Awards</a></li>
+            <li><a href="#contact" class="sidebar-link"><i data-lucide="mail"></i> Contact</a></li>
+        </ul>
+
+        <div class="sidebar-social">
+            <a href="https://github.com/belizkaleli" target="_blank" rel="noopener" aria-label="GitHub">
+                <i data-lucide="github"></i>
+            </a>
+            <a href="https://linkedin.com/in/belizkaleli" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://twitter.com/belizkaleli" target="_blank" rel="noopener" aria-label="Twitter">
+                <i data-lucide="twitter"></i>
+            </a>
+            <a href="mailto:contact@belizkaleli.com" aria-label="Email">
+                <i data-lucide="mail"></i>
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <div class="hero-label">Cybersecurity Research Engineer</div>
-            <h1 class="hero-title">
-                <span class="hero-name">Beliz Kaleli</span>
-                <span class="hero-subtitle">Building secure systems,<br>breaking vulnerable ones</span>
-            </h1>
-            <p class="hero-description">
-                Specializing in vulnerability research, exploit development, and security automation.
-                Bridging theoretical security research with practical defense mechanisms.
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-compact">
+            <p class="intro-text">
+                I'm a cybersecurity research engineer bridging theoretical security research with practical defense mechanisms. My work focuses on vulnerability discovery, exploit development, and building security automation tools.
             </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                    Get in Touch
-                    <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="#publications" class="btn btn-secondary">
-                    View Research
-                    <i data-lucide="book-open"></i>
-                </a>
-            </div>
-            <div class="hero-social">
-                <a href="https://github.com/belizkaleli" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i data-lucide="github"></i>
-                </a>
-                <a href="https://linkedin.com/in/belizkaleli" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <i data-lucide="linkedin"></i>
-                </a>
-                <a href="https://twitter.com/belizkaleli" target="_blank" rel="noopener" aria-label="Twitter">
-                    <i data-lucide="twitter"></i>
-                </a>
-                <a href="mailto:contact@belizkaleli.com" aria-label="Email">
-                    <i data-lucide="mail"></i>
-                </a>
-            </div>
-        </div>
-        <div class="scroll-hint">
-            <div class="scroll-line"></div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Introduction</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="lead">
-                            I'm a cybersecurity research engineer with a passion for discovering vulnerabilities
-                            and building robust security solutions. My work spans across vulnerability research,
-                            reverse engineering, and security automation.
-                        </p>
-                        <p>
-                            With expertise in both offensive and defensive security, I focus on understanding
-                            attack vectors to build better defenses. I've contributed to securing critical
-                            infrastructure, discovered high-impact vulnerabilities, and developed tools that
-                            help security teams work more efficiently.
-                        </p>
-                        <p>
-                            My research interests include binary exploitation, fuzzing techniques, malware
-                            analysis, and cryptographic implementations. I believe in responsible disclosure
-                            and actively contribute to the security community through publications, talks,
-                            and open-source projects.
-                        </p>
+        <!-- Publications Section -->
+        <section class="section" id="publications">
+            <h2 class="section-title">Publications</h2>
+            <div class="compact-list">
+                <div class="compact-item featured-item">
+                    <div class="item-header">
+                        <h3>Advanced Coverage-Guided Fuzzing for Modern Binary Applications</h3>
+                        <span class="item-year">2023</span>
+                    </div>
+                    <p class="item-venue">IEEE Symposium on Security and Privacy (S&P)</p>
+                    <p class="item-meta">B. Kaleli, Co-Author A., Co-Author B.</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="file-text"></i> PDF</a>
+                        <a href="#"><i data-lucide="github"></i> Code</a>
+                        <a href="#"><i data-lucide="presentation"></i> Slides</a>
                     </div>
                 </div>
-                <div class="about-expertise">
-                    <div class="expertise-card">
-                        <i data-lucide="shield-alert"></i>
-                        <h3>Offensive Security</h3>
-                        <p>Penetration testing, exploit development, and vulnerability research</p>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Automated Exploit Generation for Memory Corruption Vulnerabilities</h3>
+                        <span class="item-year">2023</span>
                     </div>
-                    <div class="expertise-card">
-                        <i data-lucide="shield-check"></i>
-                        <h3>Defensive Security</h3>
-                        <p>Security automation, threat detection, and incident response</p>
+                    <p class="item-venue">USENIX Security Symposium</p>
+                    <p class="item-meta">B. Kaleli, Co-Author C.</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="file-text"></i> PDF</a>
+                        <a href="#"><i data-lucide="github"></i> Code</a>
                     </div>
-                    <div class="expertise-card">
-                        <i data-lucide="code-2"></i>
-                        <h3>Security Tooling</h3>
-                        <p>Building frameworks and tools for security analysis and testing</p>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Dynamic Analysis of Malware Communication Patterns</h3>
+                        <span class="item-year">2022</span>
                     </div>
-                    <div class="expertise-card">
-                        <i data-lucide="book-open"></i>
-                        <h3>Research & Education</h3>
-                        <p>Publishing findings and sharing knowledge with the community</p>
+                    <p class="item-venue">ACM Conference on Computer and Communications Security (CCS)</p>
+                    <p class="item-meta">B. Kaleli, Co-Author D., Co-Author E.</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="file-text"></i> PDF</a>
+                        <a href="#"><i data-lucide="presentation"></i> Slides</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Security Analysis of IoT Firmware Update Mechanisms</h3>
+                        <span class="item-year">2022</span>
+                    </div>
+                    <p class="item-venue">Network and Distributed System Security Symposium (NDSS)</p>
+                    <p class="item-meta">B. Kaleli, Co-Author F., Co-Author G., Co-Author H.</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="file-text"></i> PDF</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Reverse Engineering Obfuscated Binary Protocols</h3>
+                        <span class="item-year">2021</span>
+                    </div>
+                    <p class="item-venue">International Conference on Software Engineering (ICSE)</p>
+                    <p class="item-meta">B. Kaleli, Co-Author I.</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="file-text"></i> PDF</a>
+                        <a href="#"><i data-lucide="github"></i> Code</a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Skills Grid -->
-            <div class="skills-section">
-                <h3 class="skills-title">Technical Expertise</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4><i data-lucide="bug"></i> Security Skills</h4>
-                        <div class="skill-tags">
-                            <span>Penetration Testing</span>
-                            <span>Reverse Engineering</span>
-                            <span>Binary Exploitation</span>
-                            <span>Fuzzing</span>
-                            <span>Malware Analysis</span>
-                            <span>Cryptography</span>
-                            <span>Vulnerability Research</span>
-                            <span>Threat Modeling</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4><i data-lucide="code"></i> Programming</h4>
-                        <div class="skill-tags">
-                            <span>Python</span>
-                            <span>C/C++</span>
-                            <span>Rust</span>
-                            <span>Assembly (x86/ARM)</span>
-                            <span>Go</span>
-                            <span>JavaScript</span>
-                            <span>Bash</span>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4><i data-lucide="wrench"></i> Tools & Platforms</h4>
-                        <div class="skill-tags">
-                            <span>IDA Pro</span>
-                            <span>Ghidra</span>
-                            <span>Burp Suite</span>
-                            <span>Metasploit</span>
-                            <span>Wireshark</span>
-                            <span>Frida</span>
-                            <span>Docker</span>
-                            <span>Kubernetes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section education" id="education">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Academic Background</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2018 - 2022</span>
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="compact-list">
+                <div class="compact-item">
+                    <div class="item-header">
                         <h3>Ph.D. in Computer Science</h3>
-                        <h4>University Name</h4>
-                        <p>Dissertation: "Advanced Fuzzing Techniques for Discovering Memory Corruption Vulnerabilities"</p>
-                        <ul>
-                            <li>Developed novel fuzzing methodologies for binary applications</li>
-                            <li>Published 8 peer-reviewed papers in top security conferences</li>
-                            <li>Recipient of Best Paper Award at Conference Name 2021</li>
-                        </ul>
+                        <span class="item-year">2018 - 2022</span>
                     </div>
+                    <p class="item-venue">University Name</p>
+                    <p class="item-meta">Dissertation: Advanced Fuzzing Techniques for Discovering Memory Corruption Vulnerabilities</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2016 - 2018</span>
+
+                <div class="compact-item">
+                    <div class="item-header">
                         <h3>M.S. in Cybersecurity</h3>
-                        <h4>University Name</h4>
-                        <p>Focus: Network Security and Cryptography</p>
-                        <ul>
-                            <li>GPA: 4.0/4.0</li>
-                            <li>Research assistant in Security Lab</li>
-                            <li>Teaching assistant for Advanced Security course</li>
-                        </ul>
+                        <span class="item-year">2016 - 2018</span>
                     </div>
+                    <p class="item-venue">University Name</p>
+                    <p class="item-meta">Focus: Network Security and Cryptography • GPA: 4.0/4.0</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2012 - 2016</span>
+
+                <div class="compact-item">
+                    <div class="item-header">
                         <h3>B.S. in Computer Engineering</h3>
-                        <h4>University Name</h4>
-                        <p>Minor: Mathematics</p>
-                        <ul>
-                            <li>Magna Cum Laude</li>
-                            <li>President of Cybersecurity Student Club</li>
-                            <li>Winner of National Cybersecurity Competition 2015</li>
-                        </ul>
+                        <span class="item-year">2012 - 2016</span>
+                    </div>
+                    <p class="item-venue">University Name</p>
+                    <p class="item-meta">Minor: Mathematics • Magna Cum Laude</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talks Section -->
+        <section class="section" id="talks">
+            <h2 class="section-title">Talks & Presentations</h2>
+            <div class="compact-list">
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>The Future of Automated Vulnerability Discovery</h3>
+                        <span class="item-year">Oct 2023</span>
+                    </div>
+                    <p class="item-venue"><span class="badge">Keynote</span> DEF CON 31, Las Vegas, NV</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="video"></i> Recording</a>
+                        <a href="#"><i data-lucide="presentation"></i> Slides</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Breaking Modern Exploit Mitigations</h3>
+                        <span class="item-year">Aug 2023</span>
+                    </div>
+                    <p class="item-venue">Black Hat USA, Las Vegas, NV</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="video"></i> Recording</a>
+                        <a href="#"><i data-lucide="presentation"></i> Slides</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Advanced Fuzzing Workshop: From Theory to Practice</h3>
+                        <span class="item-year">Jun 2023</span>
+                    </div>
+                    <p class="item-venue"><span class="badge">Workshop</span> HITB SecConf, Amsterdam</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="presentation"></i> Materials</a>
+                        <a href="#"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Malware Analysis in the Age of AI</h3>
+                        <span class="item-year">Mar 2023</span>
+                    </div>
+                    <p class="item-venue">RSA Conference, San Francisco, CA</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="video"></i> Recording</a>
+                    </div>
+                </div>
+
+                <div class="compact-item">
+                    <div class="item-header">
+                        <h3>Reverse Engineering Embedded Systems</h3>
+                        <span class="item-year">Sep 2022</span>
+                    </div>
+                    <p class="item-venue">HardwareSec Conference, Virtual</p>
+                    <div class="item-links">
+                        <a href="#"><i data-lucide="video"></i> Recording</a>
+                        <a href="#"><i data-lucide="presentation"></i> Slides</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Publications Section -->
-    <section class="section publications" id="publications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Research Output</span>
-                <h2 class="section-title">Publications</h2>
-            </div>
-            <div class="publications-grid">
-                <div class="publication-card featured">
-                    <span class="publication-badge">Featured</span>
-                    <span class="publication-year">2023</span>
-                    <h3>Advanced Coverage-Guided Fuzzing for Modern Binary Applications</h3>
-                    <p class="publication-venue">IEEE Symposium on Security and Privacy (S&P)</p>
-                    <p class="publication-authors">B. Kaleli, Co-Author A., Co-Author B.</p>
-                    <p class="publication-abstract">
-                        This paper presents a novel approach to coverage-guided fuzzing that significantly
-                        improves bug discovery rates in complex binary applications...
-                    </p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link"><i data-lucide="file-text"></i> PDF</a>
-                        <a href="#" class="pub-link"><i data-lucide="github"></i> Code</a>
-                        <a href="#" class="pub-link"><i data-lucide="presentation"></i> Slides</a>
-                    </div>
-                </div>
-
-                <div class="publication-card">
-                    <span class="publication-year">2023</span>
-                    <h3>Automated Exploit Generation for Memory Corruption Vulnerabilities</h3>
-                    <p class="publication-venue">USENIX Security Symposium</p>
-                    <p class="publication-authors">B. Kaleli, Co-Author C.</p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link"><i data-lucide="file-text"></i> PDF</a>
-                        <a href="#" class="pub-link"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="publication-card">
-                    <span class="publication-year">2022</span>
-                    <h3>Dynamic Analysis of Malware Communication Patterns</h3>
-                    <p class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</p>
-                    <p class="publication-authors">B. Kaleli, Co-Author D., Co-Author E.</p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link"><i data-lucide="file-text"></i> PDF</a>
-                        <a href="#" class="pub-link"><i data-lucide="presentation"></i> Slides</a>
-                    </div>
-                </div>
-
-                <div class="publication-card">
-                    <span class="publication-year">2022</span>
-                    <h3>Security Analysis of IoT Firmware Update Mechanisms</h3>
-                    <p class="publication-venue">Network and Distributed System Security Symposium (NDSS)</p>
-                    <p class="publication-authors">B. Kaleli, Co-Author F., Co-Author G., Co-Author H.</p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link"><i data-lucide="file-text"></i> PDF</a>
-                    </div>
-                </div>
-
-                <div class="publication-card">
-                    <span class="publication-year">2021</span>
-                    <h3>Reverse Engineering Obfuscated Binary Protocols</h3>
-                    <p class="publication-venue">International Conference on Software Engineering (ICSE)</p>
-                    <p class="publication-authors">B. Kaleli, Co-Author I.</p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link"><i data-lucide="file-text"></i> PDF</a>
-                        <a href="#" class="pub-link"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Talks Section -->
-    <section class="section talks" id="talks">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Speaking Engagements</span>
-                <h2 class="section-title">Talks & Presentations</h2>
-            </div>
-            <div class="talks-grid">
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Keynote</span>
-                        <span class="talk-date">October 2023</span>
-                    </div>
-                    <h3>The Future of Automated Vulnerability Discovery</h3>
-                    <p class="talk-venue">DEF CON 31, Las Vegas, NV</p>
-                    <p class="talk-description">
-                        Explored emerging trends in automated vulnerability discovery, discussing AI-driven
-                        fuzzing techniques and their impact on security research.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="video"></i> Recording</a>
-                        <a href="#" class="talk-link"><i data-lucide="presentation"></i> Slides</a>
-                    </div>
-                </div>
-
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Conference Talk</span>
-                        <span class="talk-date">August 2023</span>
-                    </div>
-                    <h3>Breaking Modern Exploit Mitigations</h3>
-                    <p class="talk-venue">Black Hat USA, Las Vegas, NV</p>
-                    <p class="talk-description">
-                        Demonstrated novel techniques for bypassing modern exploit mitigations including
-                        ASLR, DEP, and CFG in real-world applications.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="video"></i> Recording</a>
-                        <a href="#" class="talk-link"><i data-lucide="presentation"></i> Slides</a>
-                        <a href="#" class="talk-link"><i data-lucide="github"></i> Demo Code</a>
-                    </div>
-                </div>
-
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Workshop</span>
-                        <span class="talk-date">June 2023</span>
-                    </div>
-                    <h3>Advanced Fuzzing Workshop: From Theory to Practice</h3>
-                    <p class="talk-venue">HITB SecConf, Amsterdam, Netherlands</p>
-                    <p class="talk-description">
-                        Full-day workshop covering advanced fuzzing techniques, custom mutators, and
-                        practical approaches to finding vulnerabilities in complex software.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="presentation"></i> Materials</a>
-                        <a href="#" class="talk-link"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Invited Talk</span>
-                        <span class="talk-date">March 2023</span>
-                    </div>
-                    <h3>Malware Analysis in the Age of AI</h3>
-                    <p class="talk-venue">RSA Conference, San Francisco, CA</p>
-                    <p class="talk-description">
-                        Discussed how AI and machine learning are transforming malware analysis and
-                        detection, with case studies from recent research.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="video"></i> Recording</a>
-                        <a href="#" class="talk-link"><i data-lucide="presentation"></i> Slides</a>
-                    </div>
-                </div>
-
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Panel Discussion</span>
-                        <span class="talk-date">November 2022</span>
-                    </div>
-                    <h3>The State of Open Source Security Tools</h3>
-                    <p class="talk-venue">OWASP Global AppSec, San Francisco, CA</p>
-                    <p class="talk-description">
-                        Participated in panel discussion about the role of open source tools in modern
-                        security research and their impact on the industry.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="video"></i> Recording</a>
-                    </div>
-                </div>
-
-                <div class="talk-card">
-                    <div class="talk-header">
-                        <span class="talk-type">Technical Talk</span>
-                        <span class="talk-date">September 2022</span>
-                    </div>
-                    <h3>Reverse Engineering Embedded Systems</h3>
-                    <p class="talk-venue">HardwareSec Conference, Virtual</p>
-                    <p class="talk-description">
-                        Deep dive into techniques for reverse engineering embedded systems and firmware,
-                        with practical demonstrations on IoT devices.
-                    </p>
-                    <div class="talk-links">
-                        <a href="#" class="talk-link"><i data-lucide="video"></i> Recording</a>
-                        <a href="#" class="talk-link"><i data-lucide="presentation"></i> Slides</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section class="section awards" id="awards">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Recognition</span>
-                <h2 class="section-title">Awards & Honors</h2>
-            </div>
-            <div class="awards-grid">
-                <div class="award-card highlight">
-                    <div class="award-icon">
-                        <i data-lucide="trophy"></i>
-                    </div>
-                    <span class="award-year">2023</span>
+        <!-- Awards Section -->
+        <section class="section" id="awards">
+            <h2 class="section-title">Awards & Honors</h2>
+            <div class="compact-grid">
+                <div class="compact-card featured-card">
                     <h3>Pwnie Award for Best Research</h3>
-                    <p class="award-org">Black Hat Security Conference</p>
-                    <p class="award-description">
-                        Recognized for groundbreaking research in automated vulnerability discovery
-                        and exploit generation techniques.
-                    </p>
+                    <p class="card-org">Black Hat Security Conference</p>
+                    <span class="card-year">2023</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="award"></i>
-                    </div>
-                    <span class="award-year">2023</span>
+                <div class="compact-card">
                     <h3>Distinguished Paper Award</h3>
-                    <p class="award-org">IEEE Security & Privacy Symposium</p>
-                    <p class="award-description">
-                        For the paper "Advanced Coverage-Guided Fuzzing for Modern Binary Applications"
-                    </p>
+                    <p class="card-org">IEEE S&P Symposium</p>
+                    <span class="card-year">2023</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="medal"></i>
-                    </div>
-                    <span class="award-year">2022</span>
+                <div class="compact-card">
                     <h3>Google VRP Researcher of the Year</h3>
-                    <p class="award-org">Google Vulnerability Reward Program</p>
-                    <p class="award-description">
-                        Awarded for discovering multiple critical vulnerabilities in Chrome and Android.
-                    </p>
+                    <p class="card-org">Google Vulnerability Reward Program</p>
+                    <span class="card-year">2022</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="star"></i>
-                    </div>
-                    <span class="award-year">2022</span>
+                <div class="compact-card">
                     <h3>Best Paper Award</h3>
-                    <p class="award-org">ACM CCS Conference</p>
-                    <p class="award-description">
-                        For innovative research on malware communication pattern analysis.
-                    </p>
+                    <p class="card-org">ACM CCS Conference</p>
+                    <span class="card-year">2022</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="shield"></i>
-                    </div>
-                    <span class="award-year">2021</span>
-                    <h3>Microsoft Security Response Center Top Contributor</h3>
-                    <p class="award-org">Microsoft MSRC</p>
-                    <p class="award-description">
-                        Recognized as top security researcher for responsible disclosure of critical vulnerabilities.
-                    </p>
+                <div class="compact-card">
+                    <h3>MSRC Top Contributor</h3>
+                    <p class="card-org">Microsoft Security Response Center</p>
+                    <span class="card-year">2021</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="graduation-cap"></i>
-                    </div>
-                    <span class="award-year">2021</span>
+                <div class="compact-card">
                     <h3>NSF Graduate Research Fellowship</h3>
-                    <p class="award-org">National Science Foundation</p>
-                    <p class="award-description">
-                        Prestigious fellowship supporting outstanding graduate students in STEM fields.
-                    </p>
+                    <p class="card-org">National Science Foundation</p>
+                    <span class="card-year">2021</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="target"></i>
-                    </div>
-                    <span class="award-year">2020</span>
-                    <h3>First Place - CTF Championship</h3>
-                    <p class="award-org">DEF CON CTF Finals</p>
-                    <p class="award-description">
-                        Led team to victory in one of the world's most prestigious cybersecurity competitions.
-                    </p>
+                <div class="compact-card">
+                    <h3>First Place - DEF CON CTF</h3>
+                    <p class="card-org">DEF CON CTF Finals</p>
+                    <span class="card-year">2020</span>
                 </div>
 
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <span class="award-year">2019</span>
+                <div class="compact-card">
                     <h3>Rising Star in Security Research</h3>
-                    <p class="award-org">USENIX Security Symposium</p>
-                    <p class="award-description">
-                        Honored as an emerging leader in cybersecurity research with significant contributions to the field.
-                    </p>
+                    <p class="card-org">USENIX Security Symposium</p>
+                    <span class="card-year">2019</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-label">Let's Connect</span>
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-description">
-                    I'm always interested in discussing security research, collaboration opportunities,
-                    speaking engagements, or consulting work. Feel free to reach out!
-                </p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-compact">
+                <div class="contact-row">
+                    <div class="contact-item-compact">
                         <i data-lucide="mail"></i>
+                        <a href="mailto:contact@belizkaleli.com">contact@belizkaleli.com</a>
                     </div>
-                    <h3>Email</h3>
-                    <a href="mailto:contact@belizkaleli.com">contact@belizkaleli.com</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
+                    <div class="contact-item-compact">
                         <i data-lucide="linkedin"></i>
+                        <a href="https://linkedin.com/in/belizkaleli" target="_blank">linkedin.com/in/belizkaleli</a>
                     </div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/belizkaleli" target="_blank" rel="noopener">linkedin.com/in/belizkaleli</a>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
+                <div class="contact-row">
+                    <div class="contact-item-compact">
                         <i data-lucide="github"></i>
+                        <a href="https://github.com/belizkaleli" target="_blank">github.com/belizkaleli</a>
                     </div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/belizkaleli" target="_blank" rel="noopener">github.com/belizkaleli</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
+                    <div class="contact-item-compact">
                         <i data-lucide="twitter"></i>
+                        <a href="https://twitter.com/belizkaleli" target="_blank">@belizkaleli</a>
                     </div>
-                    <h3>Twitter</h3>
-                    <a href="https://twitter.com/belizkaleli" target="_blank" rel="noopener">@belizkaleli</a>
                 </div>
             </div>
 
-            <div class="availability">
-                <div class="availability-content">
-                    <i data-lucide="briefcase"></i>
-                    <div>
-                        <h3>Currently Available For</h3>
-                        <ul>
-                            <li>Research Collaboration</li>
-                            <li>Speaking Engagements</li>
-                            <li>Security Consulting</li>
-                            <li>Technical Advisory Roles</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="availability-compact">
+                <h3>Available For</h3>
+                <p>Research Collaboration • Speaking Engagements • Security Consulting • Technical Advisory Roles</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">BK</div>
-                    <p>Cybersecurity Research Engineer</p>
-                    <p class="footer-tagline">Securing the digital world, one vulnerability at a time.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <a href="#about">About</a>
-                        <a href="#education">Education</a>
-                        <a href="#publications">Publications</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>More</h4>
-                        <a href="#talks">Talks</a>
-                        <a href="#awards">Awards</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="https://github.com/belizkaleli" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://linkedin.com/in/belizkaleli" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="mailto:contact@belizkaleli.com">Email</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Beliz Kaleli. All rights reserved.</p>
-                <p>Built with security in mind.</p>
-            </div>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer-compact">
+            <p>&copy; 2026 Beliz Kaleli. All rights reserved.</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
