@@ -162,6 +162,7 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .sidebar-header {
@@ -213,7 +214,7 @@ body {
 
 .sidebar-title {
     font-size: 1.15rem;
-    color: #000000;
+    color: #e0e0e0;
     line-height: 1.5;
     margin-bottom: var(--spacing-md);
 }
