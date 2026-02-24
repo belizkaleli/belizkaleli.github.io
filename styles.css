@@ -57,15 +57,13 @@
 }
 
 [data-theme="light"] .sidebar-name {
-    color: #6b5544;
-    -webkit-text-stroke: 1px var(--color-accent-cyan);
-    text-stroke: 1px var(--color-accent-cyan);
+    color: #4a3828;
+    -webkit-text-stroke: 2px var(--color-accent-cyan);
+    text-stroke: 2px var(--color-accent-cyan);
 }
 
 [data-theme="light"] .sidebar-title {
-    color: #6b5544;
-    -webkit-text-stroke: 0.5px var(--color-accent-cyan);
-    text-stroke: 0.5px var(--color-accent-cyan);
+    color: var(--color-accent-cyan);
 }
 
 [data-theme="light"] .sidebar-link,
@@ -183,11 +181,11 @@ body {
 }
 
 .sidebar-name {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
-    color: #6b5544;
-    -webkit-text-stroke: 1px var(--color-accent-cyan);
-    text-stroke: 1px var(--color-accent-cyan);
+    color: #4a3828;
+    -webkit-text-stroke: 2px var(--color-accent-cyan);
+    text-stroke: 2px var(--color-accent-cyan);
     paint-order: stroke fill;
 }
 
@@ -219,11 +217,8 @@ body {
 }
 
 .sidebar-title {
-    font-size: 0.9rem;
-    color: #6b5544;
-    -webkit-text-stroke: 0.5px var(--color-accent-cyan);
-    text-stroke: 0.5px var(--color-accent-cyan);
-    paint-order: stroke fill;
+    font-size: 1.15rem;
+    color: var(--color-accent-cyan);
     line-height: 1.5;
     margin-bottom: var(--spacing-md);
 }
@@ -449,11 +444,50 @@ body {
     width: 20px;
     height: 20px;
     padding: 8px;
-    background: rgba(0, 217, 255, 0.1);
-    border: 1.5px solid var(--color-accent-cyan);
     border-radius: 6px;
-    color: var(--color-accent-cyan);
     flex-shrink: 0;
+}
+
+/* Agentic AI & Machine Learning - Purple */
+.skill-item:nth-child(1) i {
+    background: rgba(138, 43, 226, 0.15);
+    border: 1.5px solid #8a2be2;
+    color: #8a2be2;
+}
+
+/* Web Security & Threat Detection - Orange */
+.skill-item:nth-child(2) i {
+    background: rgba(255, 107, 53, 0.15);
+    border: 1.5px solid var(--color-accent-orange);
+    color: var(--color-accent-orange);
+}
+
+/* Cross-Functional Collaboration - Blue */
+.skill-item:nth-child(3) i {
+    background: rgba(77, 159, 255, 0.15);
+    border: 1.5px solid var(--color-accent-blue);
+    color: var(--color-accent-blue);
+}
+
+/* Continuous Learning - Green */
+.skill-item:nth-child(4) i {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1.5px solid #22c55e;
+    color: #22c55e;
+}
+
+/* Skiing & Tennis - Cyan */
+.skill-item:nth-child(5) i {
+    background: rgba(0, 217, 255, 0.15);
+    border: 1.5px solid var(--color-accent-cyan);
+    color: var(--color-accent-cyan);
+}
+
+/* Health & Fitness - Red */
+.skill-item:nth-child(6) i {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1.5px solid #ef4444;
+    color: #ef4444;
 }
 
 .skill-item span {
