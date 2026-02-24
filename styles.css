@@ -415,41 +415,36 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-sm);
 }
 
 .skill-item {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    padding: var(--spacing-md);
+    padding: 0.75rem 1rem;
     background: transparent;
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    transition: all 0.2s ease;
 }
 
 .skill-item i {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1.5px solid var(--color-accent-cyan);
+    border-radius: 6px;
     color: var(--color-accent-cyan);
     flex-shrink: 0;
 }
 
 .skill-item span {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    color: var(--color-text-primary);
     font-weight: 500;
-}
-
-.skill-item:hover {
-    background: rgba(0, 217, 255, 0.05);
-    border-color: var(--color-accent-cyan);
-}
-
-.skill-item:hover i {
-    color: var(--color-accent-orange);
+    line-height: 1.4;
 }
 
 /* ===========================
