@@ -260,24 +260,32 @@ body {
     border-radius: 3px;
 }
 
-#publications .section-title {
+#papers .section-title {
     color: var(--color-accent-cyan);
 }
 
-#education .section-title {
-    color: var(--color-accent-blue);
+#blogs .section-title {
+    color: var(--color-accent-orange);
 }
 
-#talks .section-title {
-    color: var(--color-accent-orange);
+#patents .section-title {
+    color: var(--color-accent-blue);
 }
 
 #awards .section-title {
     color: var(--color-accent-cyan);
 }
 
-#contact .section-title {
+#talks .section-title {
+    color: var(--color-accent-orange);
+}
+
+#education .section-title {
     color: var(--color-accent-blue);
+}
+
+#contact .section-title {
+    color: var(--color-accent-cyan);
 }
 
 /* ===========================
