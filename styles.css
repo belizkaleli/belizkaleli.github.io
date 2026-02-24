@@ -56,8 +56,18 @@
     border-bottom-color: #7a6a56;
 }
 
-[data-theme="light"] .sidebar-name,
-[data-theme="light"] .sidebar-title,
+[data-theme="light"] .sidebar-name {
+    color: #6b5544;
+    -webkit-text-stroke: 1px var(--color-accent-cyan);
+    text-stroke: 1px var(--color-accent-cyan);
+}
+
+[data-theme="light"] .sidebar-title {
+    color: #6b5544;
+    -webkit-text-stroke: 0.5px var(--color-accent-cyan);
+    text-stroke: 0.5px var(--color-accent-cyan);
+}
+
 [data-theme="light"] .sidebar-link,
 [data-theme="light"] .sidebar-social a {
     color: #f5f0e8;
@@ -175,7 +185,10 @@ body {
 .sidebar-name {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--color-text-primary);
+    color: #6b5544;
+    -webkit-text-stroke: 1px var(--color-accent-cyan);
+    text-stroke: 1px var(--color-accent-cyan);
+    paint-order: stroke fill;
 }
 
 .theme-toggle {
@@ -207,7 +220,10 @@ body {
 
 .sidebar-title {
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: #6b5544;
+    -webkit-text-stroke: 0.5px var(--color-accent-cyan);
+    text-stroke: 0.5px var(--color-accent-cyan);
+    paint-order: stroke fill;
     line-height: 1.5;
     margin-bottom: var(--spacing-md);
 }
