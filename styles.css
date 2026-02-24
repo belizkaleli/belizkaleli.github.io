@@ -373,6 +373,14 @@ body {
     border-radius: 3px;
 }
 
+#skills .section-title {
+    color: var(--color-accent-orange);
+}
+
+#experience .section-title {
+    color: var(--color-accent-blue);
+}
+
 #papers .section-title {
     color: var(--color-accent-cyan);
 }
@@ -399,6 +407,49 @@ body {
 
 #contact .section-title {
     color: var(--color-accent-cyan);
+}
+
+/* ===========================
+   Skills Grid
+   =========================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.skill-item i {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent-cyan);
+    flex-shrink: 0;
+}
+
+.skill-item span {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    background: rgba(0, 217, 255, 0.05);
+    border-color: var(--color-accent-cyan);
+}
+
+.skill-item:hover i {
+    color: var(--color-accent-orange);
 }
 
 /* ===========================
@@ -700,6 +751,10 @@ body {
     }
 
     .compact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
