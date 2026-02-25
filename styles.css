@@ -334,9 +334,17 @@ body {
 
 .main-content {
     margin-left: var(--sidebar-width);
+    margin-right: auto;
     min-height: 100vh;
     padding: 0;
-    max-width: 1400px;
+    max-width: calc(100vw - var(--sidebar-width));
+}
+
+@media (min-width: 1600px) {
+    .main-content {
+        max-width: 1400px;
+        margin-left: calc(var(--sidebar-width) + (100vw - var(--sidebar-width) - 1400px) / 2);
+    }
 }
 
 /* ===========================
