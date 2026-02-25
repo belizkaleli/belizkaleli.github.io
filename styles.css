@@ -5,8 +5,8 @@
 :root {
     /* Colors - Multi-tone palette (Dark Theme) */
     --color-bg-primary: #0a0a0a;
-    --color-bg-secondary: #464646;
-    --color-bg-tertiary: #1e1e1e;
+    --color-bg-secondary: #1a1a1a;
+    --color-bg-tertiary: #3f3f3f;
     --color-sidebar-bg: #464646;
     --color-accent-orange: #ff6b35;
     --color-accent-cyan: #00d9ff;
@@ -196,6 +196,7 @@ body {
 .sidebar-buttons {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-sm);
 }
 
@@ -221,7 +222,6 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     flex-shrink: 0;
-    margin-left: auto;
 }
 
 .theme-toggle:hover {
