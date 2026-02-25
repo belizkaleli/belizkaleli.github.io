@@ -71,7 +71,7 @@
 
 [data-theme="light"] .sidebar-link:hover {
     background: rgba(0, 217, 255, 0.2);
-    color: #1a1a1a;
+    color: #facb68;
 }
 
 [data-theme="light"] .sidebar-link.active {
