@@ -7,6 +7,7 @@
     --color-bg-primary: #0a0a0a;
     --color-bg-secondary: #464646;
     --color-bg-tertiary: #1e1e1e;
+    --color-sidebar-bg: #464646;
     --color-accent-orange: #ff6b35;
     --color-accent-cyan: #00d9ff;
     --color-accent-blue: #4d9fff;
@@ -36,6 +37,7 @@
     --color-bg-primary: #f5f0e8;
     --color-bg-secondary: #ebe5db;
     --color-bg-tertiary: #e0d9cc;
+    --color-sidebar-bg: #ebe5db;
     --color-accent-orange: #ff6b35;
     --color-accent-cyan: #0099cc;
     --color-accent-blue: #3366cc;
@@ -164,7 +166,7 @@ body {
     top: 0;
     bottom: 0;
     width: var(--sidebar-width);
-    background: var(--color-bg-secondary);
+    background: var(--color-sidebar-bg);
     border-right: 1px solid var(--color-border);
     padding: var(--spacing-xl) var(--spacing-lg);
     display: flex;
@@ -333,7 +335,7 @@ body {
     top: 1rem;
     left: 1rem;
     z-index: 1001;
-    background: var(--color-bg-secondary);
+    background: var(--color-sidebar-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0.75rem;
