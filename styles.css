@@ -210,7 +210,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    flex: 1;
     height: 38px;
     padding: 0;
     background: var(--color-bg-tertiary);
