@@ -473,7 +473,7 @@ body {
     border-radius: 8px;
 }
 
-.skill-item i {
+.skill-item svg {
     width: 20px;
     height: 20px;
     padding: 8px;
@@ -482,68 +482,44 @@ body {
 }
 
 /* Agentic AI & Machine Learning - Purple */
-.skills-grid .skill-item:nth-child(1) i {
+.skills-grid .skill-item:nth-child(1) svg {
     background: rgba(138, 43, 226, 0.15) !important;
     border: 1.5px solid #8a2be2 !important;
-    color: #8a2be2 !important;
-}
-
-.skills-grid .skill-item:nth-child(1) i svg {
     stroke: #8a2be2 !important;
 }
 
 /* Web Security & Threat Detection - Orange */
-.skills-grid .skill-item:nth-child(2) i {
+.skills-grid .skill-item:nth-child(2) svg {
     background: rgba(255, 107, 53, 0.15) !important;
-    border: 1.5px solid var(--color-accent-orange) !important;
-    color: var(--color-accent-orange) !important;
-}
-
-.skills-grid .skill-item:nth-child(2) i svg {
-    stroke: var(--color-accent-orange) !important;
+    border: 1.5px solid #ff6b35 !important;
+    stroke: #ff6b35 !important;
 }
 
 /* Cross-Functional Collaboration - Blue */
-.skills-grid .skill-item:nth-child(3) i {
+.skills-grid .skill-item:nth-child(3) svg {
     background: rgba(77, 159, 255, 0.15) !important;
-    border: 1.5px solid var(--color-accent-blue) !important;
-    color: var(--color-accent-blue) !important;
-}
-
-.skills-grid .skill-item:nth-child(3) i svg {
-    stroke: var(--color-accent-blue) !important;
+    border: 1.5px solid #4d9fff !important;
+    stroke: #4d9fff !important;
 }
 
 /* Continuous Learning - Green */
-.skills-grid .skill-item:nth-child(4) i {
+.skills-grid .skill-item:nth-child(4) svg {
     background: rgba(34, 197, 94, 0.15) !important;
     border: 1.5px solid #22c55e !important;
-    color: #22c55e !important;
-}
-
-.skills-grid .skill-item:nth-child(4) i svg {
     stroke: #22c55e !important;
 }
 
 /* Skiing & Tennis - Cyan */
-.skills-grid .skill-item:nth-child(5) i {
+.skills-grid .skill-item:nth-child(5) svg {
     background: rgba(0, 217, 255, 0.15) !important;
-    border: 1.5px solid var(--color-accent-cyan) !important;
-    color: var(--color-accent-cyan) !important;
-}
-
-.skills-grid .skill-item:nth-child(5) i svg {
-    stroke: var(--color-accent-cyan) !important;
+    border: 1.5px solid #00d9ff !important;
+    stroke: #00d9ff !important;
 }
 
 /* Health & Fitness - Red */
-.skills-grid .skill-item:nth-child(6) i {
+.skills-grid .skill-item:nth-child(6) svg {
     background: rgba(239, 68, 68, 0.15) !important;
     border: 1.5px solid #ef4444 !important;
-    color: #ef4444 !important;
-}
-
-.skills-grid .skill-item:nth-child(6) i svg {
     stroke: #ef4444 !important;
 }
 
