@@ -5,6 +5,7 @@ This is a personal website for Beliz Kaleli, a cybersecurity research engineer.
 
 ## Custom Instructions
 - Each time after you finish working on my requests ask to push the new changes to remote.  
+- Each time after resume.pdf is created, delete the other pdflatex artifacts like resume.aux etc. 
 
 DISTILLED_AESTHETICS_PROMPT = """
 <frontend_aesthetics>
