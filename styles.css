@@ -61,7 +61,7 @@
 }
 
 [data-theme="light"] .sidebar-title {
-    color: #000000;
+    color: #ceba63;
 }
 
 [data-theme="light"] .sidebar-link,
@@ -76,7 +76,7 @@
 
 [data-theme="light"] .sidebar-link.active {
     background: rgba(255, 107, 53, 0.25);
-    color: #1a1a1a;
+    color: #facb68;
 }
 
 [data-theme="light"] .resume-button {
