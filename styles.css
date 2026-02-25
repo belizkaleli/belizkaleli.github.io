@@ -203,14 +203,15 @@ body {
     color: #ffffff;
     margin-bottom: var(--spacing-xs);
     white-space: nowrap;
+    text-align: center;
 }
 
 .theme-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 38px;
     padding: 0;
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-border);
@@ -487,11 +488,19 @@ body {
     color: #8a2be2 !important;
 }
 
+.skills-grid .skill-item:nth-child(1) i svg {
+    stroke: #8a2be2 !important;
+}
+
 /* Web Security & Threat Detection - Orange */
 .skills-grid .skill-item:nth-child(2) i {
     background: rgba(255, 107, 53, 0.15) !important;
     border: 1.5px solid var(--color-accent-orange) !important;
     color: var(--color-accent-orange) !important;
+}
+
+.skills-grid .skill-item:nth-child(2) i svg {
+    stroke: var(--color-accent-orange) !important;
 }
 
 /* Cross-Functional Collaboration - Blue */
@@ -501,11 +510,19 @@ body {
     color: var(--color-accent-blue) !important;
 }
 
+.skills-grid .skill-item:nth-child(3) i svg {
+    stroke: var(--color-accent-blue) !important;
+}
+
 /* Continuous Learning - Green */
 .skills-grid .skill-item:nth-child(4) i {
     background: rgba(34, 197, 94, 0.15) !important;
     border: 1.5px solid #22c55e !important;
     color: #22c55e !important;
+}
+
+.skills-grid .skill-item:nth-child(4) i svg {
+    stroke: #22c55e !important;
 }
 
 /* Skiing & Tennis - Cyan */
@@ -515,11 +532,19 @@ body {
     color: var(--color-accent-cyan) !important;
 }
 
+.skills-grid .skill-item:nth-child(5) i svg {
+    stroke: var(--color-accent-cyan) !important;
+}
+
 /* Health & Fitness - Red */
 .skills-grid .skill-item:nth-child(6) i {
     background: rgba(239, 68, 68, 0.15) !important;
     border: 1.5px solid #ef4444 !important;
     color: #ef4444 !important;
+}
+
+.skills-grid .skill-item:nth-child(6) i svg {
+    stroke: #ef4444 !important;
 }
 
 .skill-item span {
@@ -541,11 +566,15 @@ body {
 
 .experience-item {
     display: grid;
-    grid-template-columns: 140px 1fr auto;
+    grid-template-columns: 160px 1fr auto;
     gap: var(--spacing-md);
     align-items: start;
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item .item-date {
+    white-space: nowrap;
 }
 
 .experience-item:last-child {
@@ -586,11 +615,15 @@ body {
 
 .compact-item {
     display: grid;
-    grid-template-columns: 100px 1fr auto;
+    grid-template-columns: 130px 1fr auto;
     gap: var(--spacing-lg);
     align-items: start;
     padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--color-border);
+}
+
+.compact-item .item-date {
+    white-space: nowrap;
 }
 
 .compact-item:last-child {
