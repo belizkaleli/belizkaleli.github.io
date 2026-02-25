@@ -530,6 +530,52 @@ body {
 }
 
 /* ===========================
+   Work Experience Section
+   =========================== */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    gap: var(--spacing-md);
+    align-items: start;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item .item-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+}
+
+.experience-item .item-venue {
+    font-size: 0.95rem;
+    color: var(--color-accent-blue);
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.item-location {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    text-align: right;
+    padding-top: 0.25rem;
+}
+
+/* ===========================
    Compact Lists
    =========================== */
 
@@ -808,6 +854,16 @@ body {
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
+    }
+
+    .item-location {
+        text-align: left;
+        padding-top: 0;
     }
 
     .compact-item {
