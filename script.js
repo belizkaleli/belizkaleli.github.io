@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebar();
     initSmoothScroll();
     initActiveLinks();
+    initGATracking();
 });
 
 // ===========================
@@ -244,3 +245,100 @@ console.log(`
 `,
 'color: #ff6b35; font-family: monospace; font-size: 12px; font-weight: bold;'
 );
+
+// ===========================
+// Google Analytics Tracking
+// ===========================
+
+function initGATracking() {
+    // Check if gtag is available
+    if (typeof gtag === 'undefined') {
+        console.log('Google Analytics not loaded');
+        return;
+    }
+
+    // Track resume downloads
+    const resumeLink = document.querySelector('a[href="resume.pdf"]');
+    if (resumeLink) {
+        resumeLink.addEventListener('click', () => {
+            gtag('event', 'file_download', {
+                'event_category': 'downloads',
+                'event_label': 'resume.pdf',
+                'file_name': 'resume.pdf',
+                'file_extension': 'pdf'
+            });
+        });
+    }
+
+    // Track paper downloads
+    const paperLinks = document.querySelectorAll('a[href^="papers/"]');
+    paperLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            gtag('event', 'file_download', {
+                'event_category': 'downloads',
+                'event_label': fileName,
+                'file_name': fileName,
+                'file_extension': 'pdf'
+            });
+        });
+    });
+
+    // Track external link clicks
+    const externalLinks = document.querySelectorAll('a[target="_blank"]');
+    externalLinks.forEach(link => {
+        // Skip resume and paper links (already tracked)
+        if (link.getAttribute('href').startsWith('resume.pdf') ||
+            link.getAttribute('href').startsWith('papers/')) {
+            return;
+        }
+
+        link.addEventListener('click', () => {
+            const url = link.getAttribute('href');
+            gtag('event', 'click', {
+                'event_category': 'external_links',
+                'event_label': url,
+                'link_url': url
+            });
+        });
+    });
+
+    // Track theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            gtag('event', 'theme_change', {
+                'event_category': 'engagement',
+                'event_label': newTheme,
+                'theme': newTheme
+            });
+        });
+    }
+
+    // Track section engagement using IntersectionObserver
+    const sections = document.querySelectorAll('section[id]');
+    const viewedSections = new Set();
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !viewedSections.has(entry.target.id)) {
+                viewedSections.add(entry.target.id);
+
+                gtag('event', 'section_view', {
+                    'event_category': 'engagement',
+                    'event_label': entry.target.id,
+                    'section_id': entry.target.id
+                });
+            }
+        });
+    }, {
+        threshold: 0.5 // Track when 50% of section is visible
+    });
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
