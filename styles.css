@@ -240,6 +240,7 @@ body {
     color: #e0e0e0;
     line-height: 1.5;
     margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .resume-button {
