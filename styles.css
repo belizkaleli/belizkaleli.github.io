@@ -803,7 +803,8 @@ body {
     border-radius: 8px;
 }
 
-.contact-item-compact i {
+.contact-item-compact i,
+.contact-item-compact svg {
     color: var(--color-accent-cyan);
     width: 20px;
     height: 20px;
