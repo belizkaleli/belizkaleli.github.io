@@ -173,6 +173,12 @@ body {
     flex-direction: column;
     z-index: 1000;
     overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .sidebar-header {
@@ -323,6 +329,12 @@ body {
     background: var(--color-bg-tertiary);
     color: var(--color-text-secondary);
     transition: all 0.2s ease;
+}
+
+.sidebar-social a i,
+.sidebar-social a svg {
+    width: 18px;
+    height: 18px;
 }
 
 .sidebar-social a:hover {
