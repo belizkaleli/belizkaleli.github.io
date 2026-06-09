@@ -1,3 +1,4 @@
+%!TEX program = xelatex
 %-------------------------
 % Resume - Beliz Kaleli
 % Security Research Engineer
@@ -20,6 +21,7 @@
 \usepackage{xcolor}
 \usepackage{fontspec}
 \setmainfont{Arial}
+\usepackage{setspace}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -31,8 +33,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.1in}
 
 \urlstyle{same}
 \raggedbottom
@@ -41,174 +43,200 @@
 
 % Sections formatting with colored dividers
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{NavyBlue}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\normalsize\bfseries
+}{}{0em}{}[\color{NavyBlue}\titlerule \vspace{-7pt}]
 
 % Define custom colors
 \definecolor{lightgrey}{gray}{0.5}
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeCompanyHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumePositionHeading}[2]{
+  \vspace{3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & {\small #2} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+      \textbf{\small #1} & \textit{\small #2} \\
+      {\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-9pt}
 }
 
 \newcommand{\resumePublicationHeading}[4]{
-    \item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \textbf{\small #2}\\
-      \textit{\small #3} & \\
-      \multicolumn{2}{@{}l@{}}{\itshape{\sffamily\small\color{lightgrey} #4}} \\
-    \end{tabular*}\vspace{-7pt}
+    \item {\small #1} \hfill {\small #2}\\
+      \textit{\small #3}\\
+      \textit{\footnotesize #4}\vspace{-9pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \small #1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+      \small\parbox[t]{0.95\textwidth}{#1} & {\small #2}\\     
+    \end{tabular*}\vspace{-9pt}
 }
 
 \newcommand{\resumeAwardHeading}[3]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \textbf{\small #2}\\
-      \textit{\small #3} & \\
-    \end{tabular*}\vspace{-7pt}
+      \textbf{\small #1} | \textit{\small #2} & {\small #3}\\
+    \end{tabular*}\vspace{-9pt}
 }
 
-\newcommand{\resumeHackathonHeading}[5]{
-    \item
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \textbf{\small #2}\\
-      \textit{\small #3} & \\
-      \textit{\small #4} & \\
-      \textit{{\sffamily\small\color{lightgrey} #5}} & \\
-    \end{tabular*}\vspace{-7pt}
-}
-
- \newcommand{\resumeBlogHeading}[5]{                       
-    \item                                                                
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}            
-      \textbf{\small #1} & \textbf{\small #2}\\                          
-      \textit{\small #3} & \href{#4}{\small \underline{#5}}\\            
-    \end{tabular*}\vspace{-7pt}                                          
+ \newcommand{\resumeBlogHeading}[4]{
+    \item \href{#1}{\small #2} \hfill {\small #3}\\
+      \textit{\small #4}\vspace{-9pt}
 } 
 
-\newcommand{\resumePatentHeading}[4]{
-    \item
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \textbf{\small #2}\\
-      \textit{\small #4} & \textit{\small #3}\\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumePatentHeading}[3]{
+    \item {\small #1} \hfill {\small #2}\\
+    \textit{\small #3}\vspace{-11pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\setstretch{1.00}
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Beliz Kaleli} \\ \vspace{10pt}
+    {\Huge \scshape Beliz Kaleli} \\ \vspace{2pt}
     \small
-    \href{mailto:belizkaleli18@gmail.com}{\underline{belizkaleli18@gmail.com}} ~
-    \href{https://belizkaleli.github.io}{\underline{belizkaleli.github.io}} ~
-    \href{https://linkedin.com/in/belizkaleli}{\underline{linkedin.com/in/belizkaleli}}
-    \vspace{-8pt}
+    Permitted to work in Germany ~|~
+    \href{mailto:belizkaleli18@gmail.com}{belizkaleli18@gmail.com} ~|~
+    \href{https://belizkaleli.github.io}{belizkaleli.github.io} ~|~
+    \href{https://linkedin.com/in/belizkaleli}{linkedin.com/in/belizkaleli}
+    \vspace{-20pt}
 \end{center}
+
+%-----------SUMMARY-----------
+\vspace{2pt}
+\begin{itemize}[leftmargin=0.0in, label={}]
+  \item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Primary inventor on 3+ patents and author of award-winning research and high-impact threat intelligence publications. Hands-on experience in vulnerability research (CVEs), exploit identification and malicious infrastructure analysis. Core expertise includes designing autonomous AI agents for threat detection, with a focus on emerging attack vectors such as indirect prompt injection targeting AI systems, vulnerability scanning, phishing and malware delivery methods.
+  %
+  %\item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Primary inventor on 3+ patents and author of award-winning research and high-impact threat intelligence publications. Proven track record of delivering high-performance production-grade systems that operate at scale, with hands-on experience in vulnerability research and exploit analysis to drive advancements in modern security. Core expertise includes designing autonomous AI agents for threat detection, with a focus on emerging attack vectors such as indirect prompt injection targeting AI systems, vulnerability scanning, and phishing techniques including OAuth flow abuse and GenAI-driven phishing.
+
+\end{itemize}
+\vspace{-16pt}
 
 %-----------WORK EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Palo Alto Networks}{Oct 2024 -- Present}
-      {Sr. Staff Security Research Engineer}{Santa Clara, CA, USA}
-      \begin{itemize}[leftmargin=0.3in, label={$\bullet$}]
-        \item \small Accomplished detection of novel threat vectors (e.g., indirect prompt injection, OAuth abuse, browser-in-the-middle) as detailed by multiple first-author high-impact threat intelligence blogs and posts below. 
-        \item \small Designed and developed agentic AI-based detection systems to mitigate threats on the web in real-time, contributing patent-worthy inventions, and actively leading the production detection systems that are currently in progress.
-        \item \small Used Python, Go, Javascript, SQL, HTML/CSS, Google Cloud Platform, Gemini and Claude Code.
+    \resumeCompanyHeading
+      {Palo Alto Networks}{Santa Clara, CA, USA}
+    \resumePositionHeading
+      {Sr. Staff Security Research Engineer}{Oct 2024 -- Present}
+    \resumePositionHeading
+      {Staff Security Research Engineer}{May 2023 -- Oct 2024}
+    \resumePositionHeading
+      {Security Researcher Intern}{Jun 2022 -- Nov 2022}
+      \begin{itemize}[leftmargin=0.2in, label={$\bullet$}, topsep=0pt]
+        % Scanning
+        \item \small Led a cross-functional effort to design and develop a hybrid, multi-network vulnerability scanning detection system combining volume-based features, threat signatures, and ML to block \textasciitilde1M malicious requests daily in real time (patented; first-author paper and blog).
+        % IDPI 
+        \item \small Built an AI-powered indirect prompt injection (IDPI) detection system protecting AI agents from web-based attacks; achieved first real-world detection of high-severity IDPI (AI reviewer bypass, data exfiltration, prompt leakage, and DoS) (patent pending; invited talk at Stanford University; first-author blog and post).
+        % Aegiscrawler
+        \item \small Built an autonomous AI agent crawler to solve captchas, authenticate, and navigate complex page interactions to access previously inaccessible content (gated malicious downloads, phishing forms) critical for detection (placed 2nd among 30 teams at the Google Cloud/Palo Alto Networks Agentic AI Hackathon).
+        % AVA
+        \item \small Led a cross-team effort to develop an AI-powered system for detecting OAuth flow abuse in real-time production traffic (patent pending; published 3 posts).
+        % ASTRA
+        \item \small Designed and implemented an agentic brand impersonation detection system using LLMs with RAG, multimodal analysis, and integrated tools to identify phishing attacks against global and regional brands.
+        \item \small Primary inventor on 3+ patents (7+ in total) for AI-based security detection techniques, covering phishing, scams, indirect prompt injection, vulnerability scanning, and domain squatting attacks.
+        \item \small Detected 30+ novel attack campaigns (IDPI, OAuth abuse, browser-in-the-middle, GenAI-based phishing), documented in 9 high-impact threat intelligence publications (6 as first author).
+        %\item \small Used Python, Go, Javascript, SQL, HTML/CSS, Google Cloud Platform, Gemini and Claude Code.
       \end{itemize}
-      \vspace{2pt}
-    \resumeSubheading
-      {Palo Alto Networks}{May 2023 -- Oct 2024}
-      {Staff Security Research Engineer}{Santa Clara, CA, USA}
-      \begin{itemize}[leftmargin=0.3in, label={$\bullet$}]
-        \item \small Designed and developed a hybrid (combining volume-based features, threat signatures and a machine learning model) multi-network vulnerability scanning activity detection system that actively blocks around 1 million malicious requests per day in real-time. Used Go, Python, SQL and Google Cloud Platform.
-      \end{itemize}
-      \vspace{2pt}
-    \resumeSubheading
-      {AYESAS}{Sep 2017 -- Jun 2018}
-      {Software Development Engineer}{Ankara, Turkey}
       %\vspace{2pt}
+    \resumeCompanyHeading
+      {AYESAS}{Ankara, Turkey}
+    \resumePositionHeading
+      {Software Development Engineer}{Sep 2017 -- Jun 2018}
   \resumeSubHeadingListEnd
-\vspace{4pt}
+%\vspace{2pt}
+
+%-----------SKILLS-----------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Languages:} Python, Go, SQL, C, C++, HTML/CSS, JavaScript, Typescript, Java}{}
+    \resumeProjectHeading
+      {\textbf{Tools \& Frameworks:} GCP, BigQuery, Claude Code, Google ADK, Git, CI/CD, Docker, Kubernetes, REST, gRPC, \\ MongoDB, Scikit-Learn, LangGraph, Windows, Linux, macOS}{}
+  \resumeSubHeadingListEnd
+\vspace{0.01in}
 
 %-----------AWARDS-----------
 \section{Awards \& Honors}
   \resumeSubHeadingListStart
-    \resumeHackathonHeading
-        {2nd Place at Hackathon}{2026}
-        {Google Cloud/Palo Alto Networks Agentic AI Hackathon}
-        {N. Ekanathan, \textbf{B. Kaleli}, C. Liu, S. Farooqi}
-        {AegisCrawler: Smart Agent for Unlocking Hidden Content}
-        \begin{itemize}[leftmargin=0.3in, label={$\bullet$}]
-          \item \small Built an agentic AI web crawler that unlocks valuable hidden content (e.g., malicious downloadables, phishing content) to detect malicious pages by interacting with the page (e.g., solve captchas, login). Won 2nd place out of 30 teams.
-        \end{itemize}
     \resumeAwardHeading
-        {Best Student Paper Award}{2024}
-        {International Conference on Security and Privacy in Communication Networks (SecureComm)}
+      {2nd Place at Hackathon}
+      {Google Cloud/Palo Alto Networks Agentic AI Hackathon}
+      {2026}
     \resumeAwardHeading
-        {Best Student Paper Award Finalist}{2020}
-        {The Center for Information of Systems and Engineering (CISE), Boston University}
+      {Best Student Paper Award}
+      {Security and Privacy in Communication Networks (SecureComm)}
+      {2024}     
     \resumeAwardHeading
-        {Best Paper Award}{2019}
-        {International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA)}
+      {Best Student Paper Award Finalist}
+      {The Center for Information \& Systems Engineering (CISE)}
+      {2020}
+    \resumeAwardHeading
+      {Best Paper Award}
+      {Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA)}
+      {2019}     
   \resumeSubHeadingListEnd
-\vspace{4pt}
+\vspace{0.01in}
 
 %-----------PATENTS-----------
 \section{Patents}
-  \resumeSubHeadingListStart
+  \resumeItemListStart
     \resumePatentHeading
-        {Detecting Scanning and Attacking Uniform Resource Locators in Network Traffic}{Published (US-12483573-B2)}
-        {Nov 2025}
+        {Agentic Web-Based Indirect Prompt Injection (IDPI) Detector}
+        {Filed, Apr 2026}
+        {\textbf{B. Kaleli}, S. Farooqi, N. Mohamed, A. Starov}
+    \resumePatentHeading
+        {Detecting Scanning and Attacking URLs in Network Traffic}{Patented (US-12483573-B2), Nov 2025}
         {\textbf{B. Kaleli}, F. Liu, A. Starov}
     \resumePatentHeading
-        {Phantom Squatting: Anticipating GenAI-Hallucinated URLs Before Attackers Do}{Filed}
-        {Oct 2025}
+        {Phantom Squatting: Anticipating GenAI-Hallucinated URLs Before Attackers Do}{Filed, Oct 2025}
         {K. Nagaraj, D. Marty, \textbf{B. Kaleli}, A. Starov}
     \resumePatentHeading
-        {Detecting Defensively Registered Domains Using LLMs}{Filed}
-        {Oct 2025}
+        {Detecting Defensively Registered Domains Using LLMs}
+        {Filed, Oct 2025}
         {N. Mohamed, J. Chen, A. Starov, \textbf{B. Kaleli}}
     \resumePatentHeading
-        {AVA: Authentication Verification Analyzer for Detecting OAuth Flow Abuses}{Filed}
-        {Jun 2025}
+        {AVA: Authentication Verification Analyzer for Detecting OAuth Flow Abuses}{Filed, Jun 2025}
         {\textbf{B. Kaleli}, D. Marty, L. Hu, A. Starov}
     \resumePatentHeading
-        {AI Social Engineering Defense: A Grounded AI-based Pipeline for Detecting Social Engineering Attacks}{Filed}
-        {Jun 2025}
+        {A Grounded AI-based Pipeline for Detecting Social Engineering Attacks}
+        {Filed, Jun 2025}
         {L. Hu, F. Liu, \textbf{B. Kaleli}, A. Starov}
     \resumePatentHeading
-        {A Deep Learning Approach for Real-time Scanning Attack URLs Detection Using IUPG Framework}{Filed}
-        {Feb 2025}
+        {A Deep Learning Approach for Real-time Scanning URLs Detection Using IUPG Framework}
+        {Filed, Feb 2025}
         {T. Li, B. Kutt, \textbf{B. Kaleli}, F. Liu, P. Peng, O. Starov, W. Hewlett}
-  \resumeSubHeadingListEnd
-\vspace{4pt}
+  \resumeItemListEnd
+\vspace{0.01in}
 
 %-----------ACADEMIC PAPERS-----------
 \section{Academic Papers}
-  \resumeSubHeadingListStart
+  \resumeItemListStart
     \resumePublicationHeading
-        {ScanWars: A Multi-network Approach to Detecting and Analyzing The Rise of Scanning Activity}{2025}
+        {ScanWars: (A Multi-network Approach to Detecting and Analyzing) The Rise of Scanning Activity}{2025}
         {\textbf{B. Kaleli}, T. Li, F. Liu, O. Starov, M. Egele, G. Stringhini}{Symposium on Electronic Crime Research (eCrime)}
     \resumePublicationHeading
         {EasyCSPeasy: A Server-side and Language-agnostic XSS Mitigation}{2024}
@@ -222,84 +250,108 @@
     \resumePublicationHeading
         {On the Perils of Leaking Referrers in Online Collaboration Services}{2019}
         {\textbf{B. Kaleli}, M. Egele, G. Stringhini}{International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA) --~\textbf{Best Paper Award}}
-  \resumeSubHeadingListEnd
-\vspace{4pt}
-
-%-----------BLOGS-----------
-\section{Blogs \& Posts}
-  \resumeSubHeadingListStart
-  \resumeBlogHeading
-        {Device Code-based OAuth Phishing}{Mar 2026}
-        {S. Shuang, D. Marty, \textbf{B. Kaleli}, A. Starov}
-        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7441923248310882304}
-        {Post}
-   \resumeBlogHeading
-        {Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild}{Mar 2026}
-        {\textbf{B. Kaleli}, S. Farooqi, A. Starov, N. Mohamed}
-        {https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/}
-        {Blog}
-    \resumeBlogHeading
-        {Real-World Example of Malicious Indirect Prompt Injection}{Dec 2025}
-        {\textbf{B. Kaleli}, S. Farooqi, A. Starov}
-        {https://www.linkedin.com/posts/unit42_promptinjection-activity-7406438921041018881-OKa5/}
-        {Post}
-    \resumeBlogHeading
-        {Crypto-themed Emails with Links to Sites Posing as Cryptocurrency Platforms}{Oct 2025}
-        {\textbf{B. Kaleli}, O. Starov}
-        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7389779413581746178}
-        {Post}
-    \resumeBlogHeading
-        {Phishing Campaigns Impersonate Major Business Platforms and Abuse OAuth Flows}{Oct 2025}
-        {\textbf{B. Kaleli}, O. Starov}
-        {https://www.linkedin.com/feed/update/urn:li:share:7387241426998231040}
-        {Post}
-    \resumeBlogHeading
-        {Blob URLs Used in Phishing Websites}{Oct 2025}
-        {P. Peng, A. Starov, \textbf{B. Kaleli}, L. Hu, S. Shuang}
-        {https://www.linkedin.com/feed/update/urn:li:share:7379640581871849472}
-        {Post}
-    \resumeBlogHeading
-        {Ongoing Phishing Campaign Using Browser-In-The-Middle Technique}{Sep 2025}
-        {\textbf{B. Kaleli}, A. Starov, L. Hu, S. Shuang, N. Mohamed, B. Duncan}
-        {https://www.linkedin.com/posts/unit42_phishing-bitm-activity-7376692047900184577-q9m1/}
-        {Post}
-    \resumeBlogHeading
-        {Fashionable Phishing Bait: GenAI on the Hook}{Aug 2025}
-        {Z. You, \textbf{B. Kaleli}, L. Hu, W. Wang}
-        {https://unit42.paloaltonetworks.com/genai-phishing-bait/}
-        {Blog}
-    \resumeBlogHeading
-        {It Was Not Me! Malware-Initiated Vulnerability Scanning Is on the Rise}{Apr 2024}
-        {\textbf{B. Kaleli}, F. Liu, P. Peng, A. Starov, J. Allen, S. Springer}
-        {https://unit42.paloaltonetworks.com/malware-initiated-scanning-attacks/}
-        {Blog}
-  \resumeSubHeadingListEnd
-\vspace{4pt}
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Boston University}{Sep 2018 -- Jan 2025}
-      {Ph.D., Computer Engineering | GPA: 3.8/4.0}{Boston, MA, USA}
-    \resumeSubheading
-      {Boston University}{Sep 2018 -- Sep 2021}
-      {M.S., Computer Engineering | GPA: 3.8/4.0}{Boston, MA, USA}
-    \resumeSubheading
-      {Middle East Technical University}{Sep 2013 -- Sep 2017}
-      {B.S., Electrical and Electronics Engineering}{Ankara, Turkey}
-  \resumeSubHeadingListEnd
-\vspace{4pt}
+  \resumeItemListEnd
+\vspace{0.01in}
 
 %-----------INVITED TALKS & SERVICE-----------
 \section{Invited Talks \& Service}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-        {Real World AI Security Conference at Stanford University - Invited Speaker}{Exp. Jun 2026}
+        {\textbf{Invited Speaker at Stanford University} | Real World AI Security Conference}{2026}
     \resumeProjectHeading
-        {Annual Computer Security Applications Conference (ACSAC) - Program Committee Member}{2025}
+        {\textbf{Program Committee Member} | Annual Computer Security Applications Conference (ACSAC)}{2025}
     \resumeProjectHeading
-        {University of Michigan, Center for Computer Security and Society (SECRIT) - Invited Speaker}{2021}
+        {\textbf{Invited Speaker at University of Michigan} | Center for Computer Security and Society (SECRIT)}{2021}
   \resumeSubHeadingListEnd
+\vspace{0.01in}
+
+%-----------BLOGS-----------
+\section{Other Publications}
+  \begin{description}[leftmargin=0.15in]
+    \item[\textbf{\small Blogs}] \hfill \\
+    \vspace{-10pt}
+  \end{description}
+  \resumeItemListStart
+    \resumeBlogHeading
+        {https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/}
+        {Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild}
+        {Mar 2026}
+        {\textbf{B. Kaleli}, S. Farooqi, A. Starov, N. Mohamed}
+    \resumeBlogHeading
+        {https://unit42.paloaltonetworks.com/genai-phishing-bait/}
+        {Fashionable Phishing Bait: GenAI on the Hook}
+        {Aug 2025}
+        {Z. You, \textbf{B. Kaleli}, L. Hu, W. Wang}
+    \resumeBlogHeading
+        {https://unit42.paloaltonetworks.com/malware-initiated-scanning-attacks/}
+        {It Was Not Me! Malware-Initiated Vulnerability Scanning Is on the Rise}
+        {Apr 2024}
+        {\textbf{B. Kaleli}, F. Liu, P. Peng, A. Starov, J. Allen, S. Springer}
+  \resumeItemListEnd
+  \vspace{3pt}
+  \begin{description}[leftmargin=0.15in]
+    \item[\textbf{\small Posts}] \hfill \\
+    \vspace{-10pt}
+  \end{description}
+  \resumeItemListStart
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7469871641158774784}
+        {New Browser-in-the-Browser Phishing Campaign}
+        {Jun 2026}
+        {\textbf{B. Kaleli}, G. Rane, A. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7466239963433734144}
+        {Indirect Prompt Injection to Push a Malicious Chrome Extension}
+        {May 2026}
+        {\textbf{B. Kaleli}, S. Farooqi, N. Mohamed, A. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:activity:7458596609900191744}
+        {Phishing Campaign Pivots to Sophisticated Methods}
+        {May 2026}
+        {\textbf{B. Kaleli}, A. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7441923248310882304}
+        {Device Code-based OAuth Phishing}
+        {Mar 2026}
+        {S. Shuang, D. Marty, \textbf{B. Kaleli}, A. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/posts/unit42_promptinjection-activity-7406438921041018881-OKa5/}
+        {Real-World Example of Malicious Indirect Prompt Injection}
+        {Dec 2025}
+        {\textbf{B. Kaleli}, S. Farooqi, A. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:ugcPost:7389779413581746178}
+        {Crypto-themed Emails with Links to Sites Posing as Cryptocurrency Platforms}
+        {Oct 2025}
+        {\textbf{B. Kaleli}, O. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:share:7387241426998231040}
+        {Phishing Campaigns Impersonate Major Business Platforms and Abuse OAuth Flows}{Oct 2025}
+        {\textbf{B. Kaleli}, O. Starov}
+    \resumeBlogHeading
+        {https://www.linkedin.com/feed/update/urn:li:share:7379640581871849472}
+        {Blob URLs Used in Phishing Websites}
+        {Oct 2025}
+        {P. Peng, A. Starov, \textbf{B. Kaleli}, L. Hu, S. Shuang}
+    \resumeBlogHeading
+        {https://www.linkedin.com/posts/unit42_phishing-bitm-activity-7376692047900184577-q9m1/}
+        {Ongoing Phishing Campaign Using Browser-In-The-Middle Technique}
+        {Sep 2025}
+        {\textbf{B. Kaleli}, A. Starov, L. Hu, S. Shuang, N. Mohamed, B. Duncan}
+  \resumeItemListEnd
+\vspace{0.01in}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading                           
+      {Boston University}{Boston, MA, USA}                                          
+      {Ph.D. \& M.S., Computer Engineering, ECE | GPA: 3.8/4.0}{Jan 2025}
+    \resumeSubheading
+      {Middle East Technical University}{Ankara, Turkey}
+      {B.S., Electrical and Electronics Engineering}{Sep 2017}
+  \resumeSubHeadingListEnd
+\vspace{0.01in}
+
 
 \end{document}

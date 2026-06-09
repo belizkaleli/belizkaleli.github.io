@@ -621,6 +621,76 @@ body {
 }
 
 /* ===========================
+   Collapsible Experience Bullets
+   =========================== */
+
+.experience-details {
+    margin-top: 0.625rem;
+}
+
+.experience-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.825rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent-cyan);
+    font-weight: 500;
+    user-select: none;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+.experience-toggle::-webkit-details-marker { display: none; }
+.experience-toggle::marker { display: none; }
+
+.experience-toggle::before {
+    content: '›';
+    font-size: 1.1rem;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+details[open] .experience-toggle::before {
+    transform: rotate(90deg);
+}
+
+.experience-toggle:hover {
+    color: var(--color-accent-orange);
+}
+
+.experience-bullets {
+    list-style: none;
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-left: 0;
+    border-left: 2px solid var(--color-border);
+    padding-left: 1rem;
+}
+
+.experience-bullets li {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    position: relative;
+    padding-left: 0.75rem;
+}
+
+.experience-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: -0.1rem;
+    color: var(--color-accent-cyan);
+    font-size: 0.75rem;
+    top: 0.2rem;
+}
+
+/* ===========================
    Compact Lists
    =========================== */
 
