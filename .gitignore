@@ -46,3 +46,10 @@ resume-website.out
 resume-website.synctex.gz
 bio.txt
 .claude/
+
+resume-newformat.tex
+resume-newformat.aux
+resume-newformat.log
+resume-newformat.out
+resume-newformat.pdf
+resume-newformat.synctex.gz

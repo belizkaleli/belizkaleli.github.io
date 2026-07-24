@@ -58,6 +58,13 @@
     \end{tabular*}\vspace{-1pt}
 }
 
+\newcommand{\resumePositionCompanyHeading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} | \textit{\small #2} & {\small #3}\\
+    \end{tabular*}\vspace{-3pt}
+}
+
 \newcommand{\resumePositionHeading}[2]{
   \vspace{3pt}
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -118,17 +125,18 @@
 \begin{center}
     {\Huge \scshape Beliz Kaleli} \\ \vspace{2pt}
     \small
-    Authorized to work in Europe and the US ~|~
+    % Authorized to work in Germany ~|~
     \href{mailto:belizkaleli18@gmail.com}{belizkaleli18@gmail.com} ~|~
     \href{https://belizkaleli.github.io}{belizkaleli.github.io} ~|~
     \href{https://linkedin.com/in/belizkaleli}{linkedin.com/in/belizkaleli}
-    \vspace{-20pt}
+    \vspace{-14pt}
 \end{center}
 
 %-----------SUMMARY-----------
 \vspace{2pt}
 \begin{itemize}[leftmargin=0.0in, label={}]
-  \item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered production-grade security systems for large-scale real-world threat detection in high-stakes environments. Primary inventor on 3+ patents, author of 2 award-winning research and 10+ high-impact threat intelligence publications. Core expertise includes designing autonomous AI agents for threat detection, with a focus on emerging attack vectors such as indirect prompt injections, vulnerability scanning, GenAI-driven phishing and malware delivery methods. Proven track record in vulnerability research (CVEs), exploit identification and malicious infrastructure analysis.
+  \item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Proven track record of delivering high-performance production-grade systems that operate at scale; vulnerability research (CVEs, IOCs), TTP analysis, browser exploit identification and malicious infrastructure analysis. Primary inventor on 3+ patents, author of 2 award-winning research and 10+ high-impact threat intelligence publications. Core expertise includes designing autonomous AI agents for detection, with a focus on emerging attack vectors such as indirect prompt injections, vulnerability scanning, GenAI-driven phishing and malware delivery methods.
+  %
   %
   %\item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Primary inventor on 3+ patents and author of award-winning research and high-impact threat intelligence publications. Proven track record of delivering high-performance production-grade systems that operate at scale, with hands-on experience in vulnerability research and exploit analysis to drive advancements in modern security. Core expertise includes designing autonomous AI agents for threat detection, with a focus on emerging attack vectors such as indirect prompt injection targeting AI systems, vulnerability scanning, and phishing techniques including OAuth flow abuse and GenAI-driven phishing.
 
@@ -138,14 +146,16 @@
 %-----------WORK EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
-    \resumeCompanyHeading
-      {Palo Alto Networks}{Santa Clara, CA, USA}
-    \resumePositionHeading
-      {Sr. Staff Security Research Engineer}{Oct 2024 -- Present}
-    \resumePositionHeading
-      {Staff Security Research Engineer}{May 2023 -- Oct 2024}
-    \resumePositionHeading
-      {Security Researcher Intern}{Jun 2022 -- Nov 2022}
+    % \resumeCompanyHeading
+    %   {Palo Alto Networks}{Santa Clara, CA, USA}
+    % \resumePositionHeading
+    %   {Sr. Staff Security Research Engineer}{Oct 2024 -- Present}
+    % \resumePositionHeading
+    %   {Staff Security Research Engineer}{May 2023 -- Oct 2024}
+    % \resumePositionHeading
+    %   {Security Researcher Intern}{Jun 2022 -- Nov 2022}
+    \resumePositionCompanyHeading
+      {Sr. Staff Security Research Engineer}{Palo Alto Networks, Santa Clara, CA, USA}{Oct 2024 -- Present} 
       \begin{itemize}[leftmargin=0.2in, label={$\bullet$}, topsep=0pt]
         % Scanning
         \item \small Led a cross-functional effort to design and develop a hybrid, multi-network vulnerability scanning detection system combining volume-based features, threat signatures, and ML to block \textasciitilde1M malicious requests daily in real time (patented; first-author paper and blog).
@@ -154,7 +164,7 @@
         % Aegiscrawler
         \item \small Built an autonomous AI agent crawler to solve captchas, authenticate, and navigate complex page interactions to access previously inaccessible content (gated malicious downloads, phishing forms) critical for detection (placed 2nd among 30 teams at the Google Cloud/Palo Alto Networks Agentic AI Hackathon).
         % AVA
-        \item \small Led a cross-team effort to develop an AI-powered system for detecting OAuth flow abuse in real-time production traffic (patent pending; published 3 posts).
+        \item \small Led a cross-team effort to design (PRD) and develop an AI-powered system for detecting OAuth flow abuse in real-time production traffic (patent pending; published 3 posts).
         % ASTRA
         \item \small Designed and implemented an agentic brand impersonation detection system using LLMs with RAG, multimodal analysis, and integrated tools to identify phishing attacks against global and regional brands.
         \item \small Primary inventor on 3+ patents (7+ in total) for AI-based security detection techniques, covering phishing, scams, indirect prompt injection, vulnerability scanning, and domain squatting attacks.
@@ -162,10 +172,17 @@
         %\item \small Used Python, Go, Javascript, SQL, HTML/CSS, Google Cloud Platform, Gemini and Claude Code.
       \end{itemize}
       %\vspace{2pt}
-    \resumeCompanyHeading
-      {AYESAS}{Ankara, Turkey}
-    \resumePositionHeading
-      {Software Engineer}{Sep 2017 -- Jun 2018}
+    \resumePositionCompanyHeading
+      {Staff Security Research Engineer}{Palo Alto Networks, Santa Clara, CA, USA}{May 2023 -- Oct 2024} 
+      \vspace{-16pt}
+    \resumePositionCompanyHeading
+      {Security Researcher Intern}{Palo Alto Networks, Santa Clara, CA, USA}{Jun 2022 -- Nov 2022} 
+      \vspace{-16pt}
+    \resumePositionCompanyHeading
+      {Software Engineer}{AYESAS, Ankara, Turkey}{Sep 2017 -- Jun 2018} 
+    % \resumePositionCompanyHeading
+    %   {Software Engineer Intern}{ASELSAN, Ankara, Turkey}{} 
+    %   \vspace{-16pt}
   \resumeSubHeadingListEnd
 %\vspace{2pt}
 
@@ -175,7 +192,7 @@
     \resumeProjectHeading
       {\textbf{Languages:} Python, Go, SQL, C, C++, HTML/CSS, JavaScript, Typescript, Java}{}
     \resumeProjectHeading
-      {\textbf{Tools \& Frameworks:} GCP, BigQuery, Claude Code, Google ADK, MCP, Git, CI/CD, Docker, Kubernetes, REST, gRPC, MongoDB, Scikit-Learn, LangGraph, Windows, Linux, macOS}{}
+      {\textbf{Tools \& Frameworks:} GCP, BigQuery, Vertex AI, Claude Code, Google ADK, VirusTotal, SIEM, MCP, Git, CI/CD, Docker, Kubernetes, Pub/Sub, Terraform, REST, gRPC, MongoDB, Scikit-Learn, LangChain, AWS}{}
   \resumeSubHeadingListEnd
 \vspace{0.01in}
 
@@ -261,7 +278,7 @@
     \resumeProjectHeading
         {\textbf{Program Committee Member} | Annual Computer Security Applications Conference (ACSAC)}{2025}
     \resumeProjectHeading
-        {\textbf{Invited Speaker at the University of Michigan} | Center for Computer Security and Society (SECRIT)}{2021}
+        {\textbf{Invited Speaker at University of Michigan} | Center for Computer Security and Society (SECRIT)}{2021}
   \resumeSubHeadingListEnd
 \vspace{0.01in}
 
