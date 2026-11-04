@@ -135,7 +135,7 @@
 %-----------SUMMARY-----------
 \vspace{2pt}
 \begin{itemize}[leftmargin=0.0in, label={}]
-  \item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Proven track record of delivering high-performance production-grade systems that operate at scale; vulnerability research (CVEs, IOCs), TTP analysis, browser exploit identification and malicious infrastructure analysis. Primary inventor on 3+ patents, author of 2 award-winning research and 10+ high-impact threat intelligence publications. Core expertise includes designing autonomous AI agents for detection, with a focus on emerging attack vectors such as indirect prompt injections, vulnerability scanning, GenAI-driven phishing and malware delivery methods.
+  \item \small \textbf{Principal Security Research Engineer / Team Lead} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Proven track record of delivering high-performance production-grade systems that operate at scale; vulnerability research (CVEs, IOCs), TTP analysis, browser exploit identification and malicious infrastructure analysis. Primary inventor on 3+ patents, author of 2 award-winning research and 10+ high-impact threat intelligence publications. Core expertise includes designing autonomous AI agents for detection, with a focus on emerging attack vectors such as indirect prompt injections, vulnerability scanning, GenAI-driven phishing and malware delivery methods.
   %
   %
   %\item \small \textbf{Sr. Staff Security Research Engineer} building AI-powered security systems for large-scale real-world threat detection in high-stakes environments. Primary inventor on 3+ patents and author of award-winning research and high-impact threat intelligence publications. Proven track record of delivering high-performance production-grade systems that operate at scale, with hands-on experience in vulnerability research and exploit analysis to drive advancements in modern security. Core expertise includes designing autonomous AI agents for threat detection, with a focus on emerging attack vectors such as indirect prompt injection targeting AI systems, vulnerability scanning, and phishing techniques including OAuth flow abuse and GenAI-driven phishing.
@@ -155,12 +155,17 @@
     % \resumePositionHeading
     %   {Security Researcher Intern}{Jun 2022 -- Nov 2022}
     \resumePositionCompanyHeading
-      {Sr. Staff Security Research Engineer}{Palo Alto Networks, Santa Clara, CA, USA}{Oct 2024 -- Present} 
+      {Principal Security Research Engineer}{Palo Alto Networks, Santa Clara, CA, USA}{Oct 2026 -- Present} 
+      \vspace{-16pt}
+    \resumePositionCompanyHeading
+      {Sr. Staff Security Research Engineer}{Palo Alto Networks, Santa Clara, CA, USA}{Oct 2024 -- Oct 2026} 
       \begin{itemize}[leftmargin=0.2in, label={$\bullet$}, topsep=0pt]
+        % Phishing team lead
+        \item \small Led a cross-functional team of Security Research Engineers to design, prototype, and deploy innovative AI/ML systems for detecting phishing attacks at scale.
         % Scanning
-        \item \small Led a cross-functional effort to design and develop a hybrid, multi-network vulnerability scanning detection system combining volume-based features, threat signatures, and ML to block \textasciitilde1M malicious requests daily in real time (patented; first-author paper and blog).
+        \item \small Led a cross-functional effort to design and develop a hybrid, multi-network vulnerability scanning detection system combining volume-based features, threat signatures, and ML. Currently blocks \textasciitilde1M malicious requests per day real time (patented; first-author paper and article).
         % IDPI 
-        \item \small Built an AI-powered indirect prompt injection (IDPI) detection system protecting AI agents from web-based attacks; achieved first real-world detection of high-severity IDPI (AI reviewer bypass, data exfiltration, prompt leakage, and DoS) (patent pending; invited talk at Stanford University; first-author blog and post).
+        \item \small Built an AI-powered indirect prompt injection (IDPI) detection system protecting AI agents from web-based attacks; achieved first real-world detection of high-severity IDPI (AI reviewer bypass, data exfiltration, prompt leakage, and DoS) (patent pending; invited talk at Stanford University; first-author article and post).
         % Aegiscrawler
         \item \small Built an autonomous AI agent crawler to solve captchas, authenticate, and navigate complex page interactions to access previously inaccessible content (gated malicious downloads, phishing forms) critical for detection (placed 2nd among 30 teams at the Google Cloud/Palo Alto Networks Agentic AI Hackathon).
         % AVA
@@ -168,7 +173,7 @@
         % ASTRA
         \item \small Designed and implemented an agentic brand impersonation detection system using LLMs with RAG, multimodal analysis, and integrated tools to identify phishing attacks against global and regional brands.
         \item \small Primary inventor on 3+ patents (7+ in total) for AI-based security detection techniques, covering phishing, scams, indirect prompt injection, vulnerability scanning, and domain squatting attacks.
-        \item \small Detected 30+ novel attack campaigns (IDPI, OAuth abuse, browser-in-the-middle, GenAI-based phishing), documented in 9 high-impact threat intelligence publications (6 as first author).
+        \item \small Detected 30+ novel attack campaigns (IDPI, OAuth abuse, browser-in-the-middle, GenAI-based phishing), documented in 10 high-impact threat intelligence publications (7 as first author).
         %\item \small Used Python, Go, Javascript, SQL, HTML/CSS, Google Cloud Platform, Gemini and Claude Code.
       \end{itemize}
       %\vspace{2pt}
@@ -222,6 +227,10 @@
 \section{Patents}
   \resumeItemListStart
     \resumePatentHeading
+        {A Deep Learning Approach for Real-time Scanning URLs Detection Using IUPG Framework}
+        {Patented (US-20260254819-A1), Sep 2026}
+        {T. Li, B. Kutt, \textbf{B. Kaleli}, F. Liu, P. Peng, O. Starov, W. Hewlett}
+    \resumePatentHeading
         {Agentic Web-Based Indirect Prompt Injection (IDPI) Detector}
         {Filed, Apr 2026}
         {\textbf{B. Kaleli}, S. Farooqi, N. Mohamed, O. Starov}
@@ -242,10 +251,6 @@
         {A Grounded AI-based Pipeline for Detecting Social Engineering Attacks}
         {Filed, Jun 2025}
         {L. Hu, F. Liu, \textbf{B. Kaleli}, O. Starov}
-    \resumePatentHeading
-        {A Deep Learning Approach for Real-time Scanning URLs Detection Using IUPG Framework}
-        {Filed, Feb 2025}
-        {T. Li, B. Kutt, \textbf{B. Kaleli}, F. Liu, P. Peng, O. Starov, W. Hewlett}
   \resumeItemListEnd
 \vspace{0.01in}
 
@@ -285,10 +290,15 @@
 %-----------BLOGS-----------
 \section{Other Publications}
   \begin{description}[leftmargin=0.15in]
-    \item[\textbf{\small Blogs}] \hfill \\
+    \item[\textbf{\small Articles}] \hfill \\
     \vspace{-8pt}
   \end{description}
   \resumeItemListStart
+    \resumeBlogHeading
+        {https://unit42.paloaltonetworks.com/current-landscape-oauth-attacks/}
+        {The Current Landscape of OAuth Attacks}
+        {Oct 2026}
+        {\textbf{B. Kaleli}, D. Marty, O. Starov, S. Shuang}
     \resumeBlogHeading
         {https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/}
         {Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild}
