@@ -1,0 +1,19 @@
+index.html
+  s_26f025e68cc8f8::t_b051cd10399c67 6-7,15-16,22-23,39,94,112,141,150-159,166-169,173,189-197,213-222,301-311,326,485,487-497
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "3e30fe85e364b1a692dadbdc1069315d821823fd",
+  "prompts": {},
+  "sessions": {
+    "s_26f025e68cc8f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53936ca1-aeba-487a-9cdf-fc68557cf7f5",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "belizkaleli <belizkaleli18@gmail.com>"
+    }
+  }
+}
