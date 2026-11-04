@@ -1,0 +1,19 @@
+resume-website.tex
+  s_26f025e68cc8f8::t_779fbdd7a25986 138,158-161,163-164,166,168,176,229-232,293,297-301
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "2f3434dcc394163d7c3f30430f83f24679506645",
+  "prompts": {},
+  "sessions": {
+    "s_26f025e68cc8f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53936ca1-aeba-487a-9cdf-fc68557cf7f5",
+        "model": "unknown"
+      },
+      "human_author": "belizkaleli <belizkaleli18@gmail.com>"
+    }
+  }
+}
